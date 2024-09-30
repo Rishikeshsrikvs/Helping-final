@@ -1,0 +1,111 @@
+.landeventparent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.landeventparent > h1 {
+  text-transform: uppercase;
+}
+
+.lecon {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4vh;
+}
+
+.leitem {
+  width: 400px;
+  height: 400px;
+  perspective: 1000px; /* Perspective for 3D effect */
+  cursor: pointer;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.leitem .lefront,
+.leitem .leback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back when the front is visible */
+  transition: transform 0.8s ease; /* Smooth flip effect */
+  border-radius: 10px;
+}
+
+.lefront img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.leback {
+  background-color: #000;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
+  transform: rotateY(180deg); /* Flip to the back */
+}
+
+.leback h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
+
+.letext {
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  overflow-y: scroll;
+  width: 98%;
+  padding: 10px;
+  height: 300px;
+  word-wrap: break-word;
+}
+.letext::-webkit-scrollbar {
+  display: none;
+}
+.ledown {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Flip effect */
+.flipped .lefront {
+  transform: rotateY(180deg); /* Flip the front side */
+}
+
+.flipped .leback {
+  transform: rotateY(0deg); /* Show the back side */
+}
+
+/* Hover effect for a subtle transformation */
+.leitem:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+.leitem {
+  transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+@media (max-width: 768px) {
+  .lecon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 4vh;
+  }
+}

@@ -1,0 +1,61 @@
+.homemain {
+  padding-top: 200px;
+  width: 100%;
+}
+.popupimage-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popupimage-container {
+  position: relative;
+
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.popupimage-container > button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  color: red;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+.popupcloseimage-button {
+  background: transparent;
+}
+.popupclose-button:hover {
+  background-color: darkred;
+}
+
+.popupimage-container img {
+  width: 400px;
+  height: 400px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .homemain {
+    padding-top: 80px;
+  }
+}

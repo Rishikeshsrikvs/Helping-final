@@ -1,0 +1,467 @@
+.ourprogram {
+  width: 95%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.program-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.program-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem auto;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.program-left h1 {
+  font-size: 42px;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 51px;
+}
+.program-left p {
+  font-size: 25px;
+  word-spacing: 8px;
+  margin-bottom: 2rem;
+  line-height: 30px;
+  font-weight: 400;
+  color: #000;
+}
+.program-left .join-btn {
+  padding: 14px 25px;
+  border: none;
+  color: #fff;
+  background: #0699ff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.program-left .join-btn:hover {
+  background-color: black;
+}
+.program-left h1 span {
+  color: #008b4a;
+}
+.program-right {
+  width: 49%;
+  height: auto;
+}
+.program-left {
+  width: 49%;
+}
+.program-right img {
+  width: 100%;
+}
+
+.ourprogram-sec {
+  margin-top: 10rem;
+}
+.our-heading {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 5rem;
+}
+.button-container {
+  background: #0699ff;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  height: 140px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 10rem;
+}
+.container-btns {
+  border: none;
+  outline: none;
+  width: 260px;
+  background: none;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.container-btns:hover {
+  background: none;
+  border-left: 1px solid #fff;
+  border-radius: 0px;
+  border-right: 1px solid #fff;
+  font-size: 22px;
+}
+.container-btns:active {
+  transform: scale(1.05);
+}
+.passionate {
+  width: 100%;
+  margin-top: 8rem;
+}
+.passionate .pass-con {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.passionate .pass-con h1 {
+  margin-top: 13rem;
+  margin-bottom: 80px;
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.passionate .pass-con p {
+  margin-bottom: 60px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 35px;
+  text-transform: capitalize;
+  color: #000;
+}
+.passionate .pass-con .pass-btn {
+  margin: 3rem auto;
+
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  color: #fff;
+  border: none;
+  outline: none;
+  background-color: #0699ff;
+  border-radius: 5px;
+}
+.passionate .pass-con .pass-btn:hover {
+  background-color: black;
+}
+.act-donate {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+}
+.act-donate:hover {
+  background: #fff;
+  color: black;
+}
+
+@media screen and (max-width: 1025px) {
+  .program-right {
+    width: 50%;
+    height: auto;
+  }
+  .program-left {
+    width: 45%;
+  }
+  .program-left h1 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 41px;
+  }
+  .program-left p {
+    font-size: 12px;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    line-height: 22px;
+    font-weight: 400;
+    color: #000;
+  }
+  .passionate {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  .passionate .pass-con h1 {
+    margin-top: 1rem;
+    margin-bottom: 80px;
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+}
+@media screen and (max-width: 769px) {
+  .ourprogram {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .program-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .program-content {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .program-left,
+  .program-right {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .program-left h1 {
+    font-size: 28px; /* Adjust font size for smaller screens */
+    line-height: 40px;
+    text-align: start;
+  }
+
+  .program-left p {
+    font-size: 14px; /* Adjust paragraph font size */
+    line-height: 24px;
+  }
+
+  .program-left .join-btn {
+    font-size: 18px; /* Adjust button size */
+    padding: 12px 20px;
+  }
+
+  .program-right {
+    height: auto; /* Allow the height to adjust based on content */
+  }
+
+  .program-right img {
+    height: auto; /* Ensure the image resizes correctly */
+  }
+  .program-left .join-btn {
+    padding: 14px 18px;
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  .section-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .ourprogram-sec {
+    margin-top: 4rem;
+  }
+
+  .our-heading {
+    padding-top: 20px;
+    padding-bottom: 3rem;
+  }
+  .button-container {
+    width: 95%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    margin-bottom: 8rem;
+  }
+
+  .container-btns {
+    width: 180px;
+    background: none;
+    font-size: 9px;
+    font-weight: 600;
+    font-style: italic;
+    transition: all 0.3s ease;
+  }
+  .container-btns:hover {
+    background: none;
+    border-left: 3px solid #fff;
+    border-radius: 0px;
+    border-right: 3px solid #fff;
+    font-size: 22px;
+  }
+  .container-btns:active {
+    transform: scale(1.1);
+  }
+
+  .passionate {
+    width: 100%;
+    margin-top: 3rem;
+  }
+  .passionate .pass-con {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .passionate .pass-con h1 {
+    margin-top: 2rem;
+    margin-bottom: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .passionate .pass-con p {
+    margin-bottom: 60px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: capitalize;
+    color: #000;
+  }
+  .passionate .pass-con .pass-btn {
+    margin: 1rem auto;
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #0699ff;
+    border-radius: 5px;
+  }
+
+  .act-donate {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+  }
+  .act-donate:hover {
+    background: #fff;
+    color: black;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ourprogram {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .program-container {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .program-content {
+    width: 100%;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  program-right img {
+    width: 100%;
+  }
+  .program-right {
+    width: 320px;
+    height: 400px;
+  }
+  .program-left {
+    width: 98%;
+    text-align: center;
+  }
+  .program-left h1 {
+    font-size: 16px;
+    line-height: 23px;
+    text-align: start;
+  }
+  .program-left p {
+    font-size: 10px;
+    line-height: 23px;
+    text-align: center;
+    color: #000;
+  }
+  .program-right img {
+    width: 100%;
+  }
+  .program-left .join-btn {
+    padding: 14px 18px;
+    font-size: 9px;
+    font-weight: 700;
+  }
+
+  .section-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .ourprogram-sec {
+    margin-top: 4rem;
+  }
+
+  .our-heading {
+    padding-top: 20px;
+    padding-bottom: 3rem;
+  }
+  .button-container {
+    width: 95%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px;
+    margin-bottom: 6rem;
+  }
+
+  .container-btns {
+    width: 140px;
+    background: none;
+    font-size: 8.5px;
+    font-weight: 600;
+    font-style: italic;
+    transition: all 0.3s ease;
+  }
+  .container-btns:hover {
+    background: none;
+    border-left: 3px solid #fff;
+    border-radius: 0px;
+    border-right: 3px solid #fff;
+    font-size: 10px;
+  }
+  .container-btns:active {
+    transform: scale(1.05);
+  }
+
+  .passionate {
+    width: 100%;
+    margin-top: 8rem;
+  }
+  .passionate .pass-con {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .passionate .pass-con h1 {
+    margin-top: 2rem;
+    margin-bottom: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  .passionate .pass-con p {
+    width: 100%;
+    margin-bottom: 60px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 22px;
+    text-transform: capitalize;
+    color: #000000;
+  }
+  .passionate .pass-con .pass-btn {
+    margin: 1rem auto;
+
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 14px 30px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: #0699ff;
+    border-radius: 5px;
+  }
+
+  .act-donate {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+  }
+  .act-donate:hover {
+    background: #fff;
+    color: black;
+  }
+}

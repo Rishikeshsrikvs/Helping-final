@@ -1,0 +1,17 @@
+.bloodtablemain {
+  width: 80%;
+  margin: 5vh auto;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.bloodtable {
+  border: none;
+  border-collapse: collapse;
+  width: 98%;
+  margin: 0 auto;
+}
+.bloodtablemain h1,
+.bloodtablemain p {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+}

@@ -1,0 +1,188 @@
+.main-admingall {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.admingallery {
+  width: 60%;
+  height: 380px;
+  background: #001f34;
+  border-radius: 11px;
+}
+.adgall-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+}
+.adgall-heading {
+  font-size: 27px;
+  color: #fff;
+  font-family: "Outfit";
+  font-weight: 600;
+}
+.adgall-btns {
+  width: 285px;
+  height: 242px;
+  background: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 9px;
+  margin-top: 30px;
+}
+
+.adgall-btns p {
+  color: #fff;
+  padding-bottom: 5px;
+  margin: 0 4px;
+}
+.adgalline {
+  width: 90px;
+  height: 1px;
+  background-color: #fff;
+}
+.or {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  line-height: 30px;
+}
+.upload-btn {
+  width: 225px;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+  color: #135cff;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.upload-btn:hover {
+  transform: scale(1.02);
+  background: #ddd8d8;
+  color: #000;
+}
+.upload-btn:active {
+  transform: scale(0.98);
+  background: #ddd8d8;
+  color: #000;
+}
+.drive-btn {
+  width: 225px;
+  height: 46px;
+  font-size: 16px;
+  color: #135cff;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  font-weight: 600;
+}
+.drive-btn:hover {
+  transform: scale(1.02);
+  background: #ddd8d8;
+  color: #000;
+}
+.drive-btn:active {
+  transform: scale(0.98);
+  background: #ddd8d8;
+  color: #000;
+}
+.adgall-sub-btn {
+  color: #ffffff;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  font-weight: 600;
+  background-color: #808080;
+  margin-top: 20px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.adgall-sub-btn:hover {
+  transform: scale(1.02);
+  background: #3a3a3a;
+  color: #ffffff;
+}
+.adgall-sub-btn:active {
+  transform: scale(0.98);
+  color: #808080;
+}
+
+.success-message {
+  color: white;
+  margin-top: 5px;
+}
+.error-message {
+  color: rgb(250, 120, 81);
+  margin-top: 5px;
+}
+#adgegalimg {
+  display: none;
+}
+.upload-btn input {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .adgall-heading {
+    font-size: 20px;
+    height: 30px;
+    color: #fff;
+    font-family: "Outfit";
+    font-weight: 600;
+  }
+  .adgall-btns {
+    width: 205px;
+    height: unset;
+    background: #000;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 9px;
+    margin-top: 30px;
+  }
+  .admingallery {
+    width: 95%;
+    height: 380px;
+    background: #001f34;
+    border-radius: 11px;
+  }
+  .upload-btn {
+    width: 185px;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    color: #135cff;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .drive-btn {
+    width: 185px;
+    height: 46px;
+    font-size: 16px;
+    color: #135cff;
+    background: #ffffff;
+    border: none;
+    outline: none;
+    font-weight: 600;
+  }
+}

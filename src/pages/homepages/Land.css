@@ -1,0 +1,769 @@
+.landparent {
+  width: 100%;
+  overflow: hidden;
+}
+.land3main {
+  width: 85vw;
+  padding: 3%;
+  margin: 10vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background: url("./../../assets/Land/Rectangle 6.png") 100% 100%;
+}
+.land3main h1 {
+  text-align: center;
+  width: 70%;
+  text-transform: capitalize;
+}
+.land4main {
+  width: 85vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10vh auto;
+}
+.land4card {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 350px;
+  padding: 2%;
+  gap: 5px;
+  width: 30%;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.land4card > h1 {
+  margin-top: 20px;
+}
+.land4card > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.land5main {
+  background: url("./../../assets/Land/Rectangle.png") no-repeat;
+  background-size: cover;
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.land5main > div {
+  height: 300px;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+  border-radius: 9px;
+  text-transform: uppercase;
+}
+.land5main > div > span {
+  font-family: Plus Jakarta Sans;
+  font-size: 36px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 45.36px;
+  text-align: left;
+  color: white;
+  margin-bottom: 10px;
+  border-bottom: 3px solid white;
+}
+.land5main > div > p {
+  color: white;
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 800;
+
+  text-align: center;
+  width: 80%;
+}
+.land5card1 {
+  background-color: #ff90b2;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.land5card2 {
+  background-color: #7755ff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.land6main {
+  width: 100%;
+  padding: 2%;
+}
+.land6main > h1 {
+  margin: 10px 20px;
+}
+.land6split {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 2%;
+}
+.l6left {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.l61 {
+  width: 500px;
+ 
+  margin-bottom: 20px;
+}
+.l6leftdown {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+.l62,
+.l63 {
+  object-fit: cover;
+  height: 180px;
+}
+.l6right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 40px;
+  justify-content: space-evenly;
+  
+}
+.l6right h1 {
+  font-family: Plus Jakarta Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 60.4px;
+  text-align: left;
+}
+.l6right p{
+  font-family: Plus Jakarta Sans;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 40.4px;
+  text-align: left;
+  padding-left: 20px;
+}
+.l6right span {
+  color: #0699ff;
+}
+.l6rightbtn{
+  padding-left: 40px;
+}
+.l6rightbtn button {
+  color: white;
+  background-color: #0699ff;
+  padding: 10px 40px;
+  font-family: Plus Jakarta Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.2px;
+  text-align: left;
+  width: unset;
+  margin: auto;
+  border: none;
+}
+
+.land7main {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 20px;
+}
+.l7text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2%;
+  gap: 20px;
+}
+.l7text h1 {
+  font-family: Plus Jakarta Sans;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 40.32px;
+  text-align: left;
+}
+.l7text p {
+  font-family: Plus Jakarta Sans;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 33px;
+  text-align: left;
+}
+.l7imgcon {
+  background-color: #0699ff;
+  width: 55%;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  padding: 2% 3%;
+  justify-content: space-between;
+}
+.l7imgcon > div {
+  width: 46%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  background-color: white;
+  justify-content: space-between;
+  border-radius: 4px;
+  position: relative;
+  padding-bottom: 30px;
+}
+.l7imgcon > div > span {
+  width: 90%;
+  height: 13px;
+  position: absolute;
+  bottom: -8px;
+  border-radius: 3px;
+  background-color: rgb(255, 174, 0);
+}
+.l7imgcon > div > h1 {
+  text-transform: uppercase;
+}
+.l7imgcon > div > p {
+  width: 80%;
+  text-align: center;
+}
+.l7img {
+  height: 300px;
+
+  width: 100%;
+}
+.l7img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.land8main {
+  width: 98%;
+  margin: 10vh auto;
+  background-color: #0699ff;
+  color: white;
+  display: flex;
+  padding: 1.5%;
+  border-radius: 12px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.l8left {
+  width: 47%;
+}
+.l8left > h1 {
+  color: white;
+  font-family: Plus Jakarta Sans;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+
+  text-align: left;
+  text-transform: uppercase;
+}
+.l8left > h1 > span {
+  font-family: Plus Jakarta Sans;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: 800;
+  color: black;
+  text-align: left;
+}
+.land8main .l8line {
+  width: 1px;
+  height: 300px;
+  background: white;
+}
+.l8right {
+  width: 48%;
+}
+.l8right > p {
+  font-family: Plus Jakarta Sans;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 39px;
+  text-align: center;
+}
+
+.land9main {
+  width: 100%;
+  margin: 15vh auto;
+}
+.land9main > h1 {
+  text-align: center;
+  margin-bottom: 5lvh;
+}
+.l9gal {
+  display: flex;
+  flex-direction: row;
+  width: 98%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.l9gal img {
+ 
+  width: 100%;
+}
+.l9left,
+.l9right {
+  width: 20%;
+}
+.l9c1,
+.l9c2 {
+  width: 29%;
+}
+
+.land10main {
+  width: 100%;
+  background: url("./../../assets/Land/land10back.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  display: flex;
+  padding: 2%;
+
+  flex-direction: row;
+  margin: 10vh auto;
+}
+.l10left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 2%;
+}
+.l10left > h1 {
+  color: #00e5ff;
+  font-family: Plus Jakarta Sans;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 63px;
+  text-align: left;
+}
+.l10left > p {
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30.24px;
+  text-align: left;
+  color: white;
+}
+.l10leftbtn {
+  text-align: left;
+}
+.l10leftbtn > button {
+  color: white;
+  background-color: #00e5ff;
+  padding: 10px 30px;
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30.24px;
+  text-align: left;
+  border: none;
+  border-radius: 5px;
+}
+.l10leftbtn > button:hover {
+  background-color: black;
+}
+.l10right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.l10right > div {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+@media (max-width: 768px) {
+  .land3main {
+    width: 85vw;
+    padding: 3%;
+    margin: 10vh auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url("./../../assets/Land/Rectangle 6.png") 100% 100%;
+  }
+  .land3main h1 {
+    text-align: center;
+    width: 80%;
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+  .land10main {
+    width: 100%;
+    background: url("./../../assets/Land/land10back.png");
+    background-size: 500%;
+    background-repeat: repeat;
+    background-position: center;
+
+    display: flex;
+    padding: 2%;
+    gap: 6px;
+
+    flex-direction: column-reverse;
+    margin: 10vh auto;
+  }
+  .l10left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 2%;
+  }
+  .l10left > h1 {
+    color: #00e5ff;
+    font-family: Plus Jakarta Sans;
+    font-size: 30px;
+    font-weight: 700;
+
+    text-align: left;
+  }
+  .l10left > p {
+    font-family: Plus Jakarta Sans;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.24px;
+    text-align: left;
+    color: white;
+  }
+  .l10leftbtn {
+    text-align: left;
+  }
+  .l10leftbtn > button {
+    color: white;
+    background-color: #00e5ff;
+    padding: 10px 30px;
+    font-family: Plus Jakarta Sans;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 30.24px;
+    text-align: left;
+    border: none;
+  }
+  .l10right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .l10right > div {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+  .l10right > div img {
+    height: 100px;
+  }
+
+  .land4main {
+    width: 85vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3vh auto;
+    gap: 10px;
+  }
+  .land4card {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    padding: 2%;
+    width: 80%;
+    gap: 5px;
+    justify-content: center;
+  }
+  .land4card > h1 {
+    margin-top: 20px;
+    text-align: center;
+  }
+  .land4card > h2{
+    text-align: center;
+  }
+  .land4card > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: red;
+  }
+
+  .land5main {
+    background: url("./../../assets/Land/Rectangle.png") no-repeat;
+    background-size: cover;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .land5main > div {
+    height: 300px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1%;
+    border-radius: 9px;
+    text-transform: uppercase;
+  }
+  .land5main > div > span {
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 45.36px;
+    text-align: left;
+    color: white;
+    margin-bottom: 10px;
+    border-bottom: 3px solid white;
+  }
+  .land5main > div > p {
+    color: white;
+    font-family: Plus Jakarta Sans;
+    font-size: 17px;
+    font-style: italic;
+    font-weight: 800;
+
+    text-align: center;
+    width: 80%;
+  }
+
+  .land6main {
+    width: 100%;
+    padding: 4%;
+  }
+  .land6main > h1 {
+    margin: 10px 20px;
+  }
+  .land6split {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    gap: 6px;
+    padding: 2%;
+  }
+  .l6left {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-evenly;
+  }
+  .l61 {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+  }
+  .l6leftdown {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+  }
+  .l62,
+  .l63 {
+    width: 49%;
+    height: 120px;
+  }
+  .l6right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+  .l6right h1 {
+    font-family: Plus Jakarta Sans;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30.4px;
+    text-align: center;
+  }
+
+  .l6right p {
+    font-size: 13px;
+    line-height: 17px;
+    padding: unset;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .l6rightbtn{
+    padding-left: unset;
+  }
+  .land7main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .l6rightbtn {
+    text-align: center;
+  }
+  .l6rightbtn button{
+    font-size: 12px;
+    
+  }
+  .l7text {
+    width: 100%;
+  }
+  .l7text h1 {
+    font-family: Plus Jakarta Sans;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30.32px;
+    text-align: left;
+  }
+  .l7text p {
+    font-family: Plus Jakarta Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 23px;
+    text-align: left;
+  }
+  .l7imgcon {
+    flex-direction: column;
+    width: 90%;
+    padding: 2%;
+    gap: 10px;
+    align-items: center;
+  }
+  .l7imgcon > div {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    background-color: white;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .l7imgcon > div > h1 {
+    font-size: 19px;
+  }
+  .l7imgcon > div > p {
+    font-size: 12px;
+  }
+  .l7img{
+    height: 190px;
+
+  }
+  .l7img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+    .land8main {
+    width: 98%;
+    margin: 10vh auto;
+    background-color: #0699ff;
+    color: white;
+    display: flex;
+    padding: 4%;
+    border-radius: 12px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .l8left {
+    width: 100%;
+  }
+  .l8left > h1 {
+    color: white;
+    font-family: Plus Jakarta Sans;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .l8left > h1 > span {
+    font-family: Plus Jakarta Sans;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 800;
+    color: black;
+    text-align: left;
+  }
+  .land8main .l8line {
+    display: none;
+  }
+  .l8right {
+    width: 100%;
+  }
+  .l8right > p {
+    font-family: Plus Jakarta Sans;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 20px;
+    text-align: center;
+  }
+  .l9left,
+  .l9right,.l9c1,.l9c2 {
+    width: 49%;
+    height: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    
+ 
+  }
+  .l9left{
+    height: 50%;
+  }
+  .l9c1,
+  .l9c2 {
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+  }
+  .l9gal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 98%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 10%;
+    height: 50vh;
+  }
+}

@@ -1,0 +1,247 @@
+.main-adupcomingevent {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10vh auto;
+}
+
+.table-container {
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #0a2e47;
+  color: white;
+
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.adupcomingevent-heading h1 {
+  font-size: 27px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+.uetitle {
+  width: 97%;
+  text-align: right;
+  padding: 20px 0;
+}
+.uetitle button {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+  border-radius: 5px;
+  border: none;
+}
+.uetitle button:hover {
+  background-color: gray;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #fff;
+  color: white;
+}
+
+table th {
+  text-transform: uppercase;
+}
+.eventname {
+  width: 20%;
+  border-left: none;
+  text-align: center;
+}
+.date {
+  width: 20%;
+  text-align: center;
+}
+.location {
+  width: 20%;
+  text-align: center;
+}
+.DESC {
+  text-align: center;
+  width: 20%;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.evbtn {
+  width: 20%;
+}
+.evDESC p{
+  max-height: 100px;
+  overflow-y: scroll;
+}
+.evDESC p::-webkit-scrollbar {
+  display: none;
+}
+table td {
+  background-color: #0a2e47;
+}
+
+.table-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 3px;
+  padding: 6px 18px;
+  transition: all 0.5s ease;
+  margin-bottom: 18px;
+}
+
+.table-button:hover {
+  transition: background 0.1s ease;
+  background: #ff0000;
+  transform: scale(1.05);
+}
+.table-button:active {
+  transform: scale(0.95);
+}
+
+@media screen and (max-width: 821px) {
+  .table-container {
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: scroll;
+    background-color: #0a2e47;
+    color: white;
+    white-space: nowrap;
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .main-adupcomingevent {
+    width: 100%; /* Ensure 80% width for smaller screens */
+  }
+  th {
+    font-size: 10px;
+    width: 500px;
+  }
+
+  table td {
+    font-size: 14px;
+    background-color: #0a2e47;
+  }
+  .table-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 5px 6px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 7px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 6px 18px;
+    transition: all 0.5s ease;
+    margin-bottom: 18px;
+  }
+  .adupcomingevent-heading h1 {
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+@media (max-width: 480px) {
+  .table-container {
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: scroll;
+    background-color: #0a2e47;
+    color: white;
+    white-space: nowrap;
+
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  .uetitle {
+    width: 97%;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .uetitle button {
+    padding: 10px 10px;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    border-radius: 5px;
+    border: none;
+  }
+  .main-adupcomingevent {
+    width: 90%;
+    margin-top: 0; /* Ensure 80% width for smaller screens */
+  }
+  th {
+    font-size: 10px;
+    width: 500px;
+  }
+
+  table td {
+    font-size: 10px;
+    background-color: #0a2e47;
+  }
+  .table-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 5px 6px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 7px;
+    font-weight: 600;
+    border-radius: 3px;
+    padding: 6px 18px;
+    transition: all 0.5s ease;
+    margin-bottom: 18px;
+  }
+  .adupcomingevent-heading h1 {
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 0%;
+  }
+  ::-webkit-scrollbar {
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}

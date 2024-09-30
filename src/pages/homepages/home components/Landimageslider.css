@@ -1,0 +1,17 @@
+.mySwiper {
+  height: 500px;
+  margin-bottom: 0vh;
+  margin-top: 4vh;
+}
+
+.swipecon img {
+  width: 100vw;
+}
+
+@media (max-width: 768px) {
+  .mySwiper {
+    height: 200px;
+    margin-bottom: 0vh;
+    margin-top: 4vh;
+  }
+}

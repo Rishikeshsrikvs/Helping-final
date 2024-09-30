@@ -1,0 +1,95 @@
+.request-container {
+  width: 60%;
+  margin: 10vh auto;
+
+  padding: 80px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-block-color: #000000;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.request-container input,
+.request-group select {
+  background-color: #0e0a0a;
+  border: 1px solid black;
+  color: #ffffff;
+  padding: 8px 5px;
+  border-radius: 5px;
+}
+
+.request-title {
+  font-size: 34px;
+  color: #000000;
+
+  margin-bottom: 20px;
+}
+
+.request-title .highlight {
+  color: red;
+}
+
+.request-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.request-group {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.request-label {
+  font-size: 14px;
+  color: #080303;
+  margin-bottom: 10px;
+  text-align: start;
+}
+
+.request-label input[type="text"]::placeholder {
+  color: #888;
+}
+
+.buttonrr {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #070606;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-rowss {
+  margin-top: 20px;
+  color: #000000;
+}
+
+.buttonrr:hover {
+  background-color: rgb(136, 133, 133);
+  color: red;
+}
+
+@media screen and (max-width: 768px) {
+  .request-container {
+    width: 80%;
+    padding: 30px;
+  }
+  .request-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .request-group {
+    width: 100%;
+  }
+  .request-label {
+    margin-bottom: 4px;
+  }
+}

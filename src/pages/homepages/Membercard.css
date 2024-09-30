@@ -1,0 +1,113 @@
+.membercard {
+  width: 110vh;
+  height: 70vh;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin: 3vh auto;
+}
+.memberback {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -23;
+}
+.memberback img {
+  width: 100%;
+  height: 100%;
+}
+.membersub {
+  width: 100%;
+  height: 100%;
+  padding: 17% 8% 10% 35%;
+}
+.mmtext {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+.mmrow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2% 4%;
+  align-items: center;
+}
+.mmrow span {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(15, 15, 80);
+}
+.mmrow label {
+  width: 40%;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(15, 15, 80);
+}
+.mmsubp {
+  width: 60%;
+  font-size: 17px;
+  font-weight: 700;
+  color: rgb(15, 15, 80);
+  padding-left: 30px;
+}
+.mmtitle {
+  text-align: left;
+  width: 100%;
+  font-size: 20px;
+  margin-left: 18%;
+  font-weight: 700;
+  color: rgb(15, 15, 80);
+}
+@media (max-width: 768px) {
+  .membercard {
+    width: 90vw;
+    height: 38vh;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 3vh auto;
+  }
+  .membersub {
+    width: 100%;
+    height: 100%;
+    padding: 20% 8% 10% 35%;
+  }
+  .mmrow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 2% 4%;
+    align-items: center;
+  }
+  .mmrow span {
+    font-size: 10px;
+    font-weight: 700;
+    color: rgb(15, 15, 80);
+  }
+  .mmrow label {
+    width: 40%;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgb(15, 15, 80);
+  }
+  .mmsubp {
+    width: 60%;
+    font-size: 11px;
+    font-weight: 700;
+    color: rgb(15, 15, 80);
+    padding-left: 30px;
+  }
+  .mmtitle {
+    text-align: left;
+    width: 100%;
+    font-size: 11px;
+    margin-left: 18%;
+    font-weight: 700;
+    color: rgb(15, 15, 80);
+  }
+}

@@ -1,0 +1,88 @@
+
+
+.form-container {
+    width:60%;
+    height: 80vh;
+    margin: auto;
+    background-color: #111;
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form-title {
+    width: 100%;
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-title .highlight {
+    color: red;
+}
+form{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+.form-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    text-align: start;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+input, select {
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+select {
+    padding: 10px;
+    font-size: 14px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"]::placeholder {
+    color: #999;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: red;
+    color: white;
+}
+
+.submit-row {
+    margin-top: 20px;
+}

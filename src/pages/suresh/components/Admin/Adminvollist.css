@@ -1,0 +1,80 @@
+.adminvollist {
+  margin: 3rem auto;
+}
+.adminvollist h2 {
+  font-size: 24px;
+}
+
+.vl-table-container {
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #042033;
+}
+
+.vl-table-title {
+  text-align: center;
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.vl-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+}
+
+.vl-table th,
+.vl-table td {
+  padding: 10px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.vl-table th {
+  background-color: #0a2e47; /* Dark header color */
+  font-weight: bold;
+}
+
+.vl-table td {
+  background-color: #042033; /* Slightly darker row background */
+}
+
+.vl-table tbody tr:nth-child(even) {
+  background-color: #063c4f; /* Alternating row color */
+}
+
+.vl-table td:hover {
+  background-color: #0b486b; /* Hover effect for rows */
+}
+
+@media screen and (max-width: 480px) {
+  .vl-table th,
+  .vl-table td {
+    width: 150px;
+  }
+  .adminvollist h2 {
+    font-size: 14px;
+  }
+  .vl-table {
+    min-width: 750px;
+    margin-bottom: 3rem;
+  }
+
+  .vl-table-container {
+    overflow-x: scroll;
+  }
+
+  .vl-table-container {
+    scrollbar-color: black #ccc;
+    scrollbar-width: thin;
+  }
+  .vl-table-container {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .vl-table td {
+    font-size: 12px; /* Slightly darker row background */
+  }
+}

@@ -1,0 +1,121 @@
+.imgback {
+  background-size: 100%;
+  background-position: center;
+  height: 50vh;
+
+  background-repeat: no-repeat;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 10vh auto;
+}
+
+.slider-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0% auto;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slide {
+  /* display:flex ; 
+    gap: 30px;  */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+  width: 90%;
+  margin: 0 auto;
+  height: 80%;
+}
+
+.volunter {
+  text-align: center;
+  margin-bottom: 40%;
+}
+
+.image-slide img {
+  width: 100%;
+  height: 240px;
+  display: flex;
+  justify-items: center;
+  border-radius: 8px;
+  margin-bottom: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-slide img:hover {
+  transform: scale(1.05);
+}
+.vasubmit {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.vallalarbtn {
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  width: 15%;
+  font-style: initial;
+  font-size: 30px;
+  padding: 15px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vallalarbtn:hover {
+  background-color: blue;
+  transition: all 0.1s ease;
+}
+
+@media (max-width: 768px) {
+  .imgback {
+    background-size: 100%;
+    background-position: center;
+    height: 80vh;
+    padding: 3vh auto;
+    background-repeat: repeat;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .slider-container {
+    width: 100%;
+
+    height: 100%;
+  }
+  .image-slide {
+    display: flex;
+    width: 100%;
+
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+  .image-slide img {
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-items: center;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .vallalarbtn {
+    width: 60%;
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+}

@@ -1,0 +1,84 @@
+.ad-donner-container {
+  width: 100%;
+  margin: 50px auto;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.ad-donner-container h1 {
+  font-size: 24px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #000;
+}
+
+.ad-donner-table-container {
+  width: 98%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.ad-donner-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #042d41;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+th {
+  background-color: #033544;
+  font-weight: bold;
+}
+.d-th {
+  text-align: center;
+}
+.d-td {
+  text-align: center;
+}
+
+td {
+  background-color: #02202f;
+  height: 100px; /* Adjust height to match the style in the image */
+}
+
+/* Download button styling */
+.ad-donner-download-button {
+  width: 100%;
+  text-align: right;
+  padding: 0 3%;
+}
+
+.ad-donner-download-button .ad-don-btn {
+  width: 200px;
+  background-color: black;
+  color: white;
+  padding: 9px 20px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.ad-don-btn:hover {
+  background-color: #333;
+}
+
+/* Optional: Adjust the table width for smaller devices */
+@media screen and (max-width: 768px) {
+  .ad-donner-container th,
+  .ad-donner-container td {
+    padding: 10px;
+  }
+
+  .ad-donner-download-button {
+    text-align: center;
+    margin-right: 0;
+  }
+}

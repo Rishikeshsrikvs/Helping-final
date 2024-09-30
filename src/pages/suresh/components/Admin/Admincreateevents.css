@@ -1,0 +1,206 @@
+.admincreateevents {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.admincreate-event-container {
+  width: 90%;
+  margin: 3rem auto;
+  background-color: #001f36;
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.admincreate-event-title {
+  text-align: center;
+  color: #000;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.admincreate-event-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.admincreate-form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  gap: 40px;
+}
+
+.admincreate-form-group {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.admincreate-form-group label {
+  display: block;
+  color: white;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.admincreate-form-group input,
+.admincreate-form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.admincreate-form-group input {
+  height: 40px;
+}
+
+.admincreate-form-group textarea {
+  height: 150px;
+}
+
+.admincreate-image-upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  align-items: center;
+  background-color: #fff;
+}
+.admincreate-image-upload > label {
+  padding: 10px 30px;
+  background-color: black;
+  color: white;
+}
+#event-image {
+  display: none;
+}
+
+.spanred {
+  background: none;
+  color: red;
+  margin-right: 5px;
+}
+
+
+
+.center-elements {
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.admincreate-upload-btn,
+.admincreate-submit-btn {
+  width: 70%;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  border-radius: 5px;
+}
+
+.admincreate-upload-btn:hover,
+.admincreate-submit-btn:hover {
+  background-color: #333;
+}
+
+.admincreate-create-event-btn {
+  width: 200px;
+  padding: 10px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+
+  margin: 4rem auto;
+  display: block;
+}
+
+.admincreate-create-event-btn:hover {
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .admincreateevents {
+    width: 100%;
+    margin-top: 0.1rem;
+  }
+  .admincreate-event-container {
+    width: 100%;
+    padding: 25px;
+    margin: 1rem auto;
+  }
+
+  .admincreate-form-row {
+    flex-direction: column;
+  }
+
+  .admincreate-form-group {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .admincreate-create-event-btn {
+    width: 90%;
+  }
+  .admincreate-event-title {
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+  .admincreate-event-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+  .admincreate-form-row {
+    justify-content: space-around;
+    gap: 0px;
+  }
+  .admincreate-form-group label {
+    font-size: 11px;
+    margin-bottom: 8px;
+  }
+  .admincreate-form-group input,
+  .admincreate-form-group textarea {
+    padding: 8px;
+    font-size: 10px;
+  }
+  .admincreate-form-group input {
+    height: 30px;
+  }
+  .admincreate-form-group textarea {
+    height: 70px;
+  }
+  .admincreate-uploadbox {
+    background: #fff;
+    width: 165px;
+    height: 142px;
+    border-radius: 10px;
+  }
+  .admincreate-upload-btn,
+  .admincreate-submit-btn {
+    width: 50%;
+
+    font-size: 8px;
+    border-radius: 5px;
+  }
+
+  .admincreate-create-event-btn {
+    width: 100px;
+    padding: 10px;
+    font-size: 10px;
+    margin: 1rem auto;
+  }
+}

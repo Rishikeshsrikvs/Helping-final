@@ -1,0 +1,171 @@
+.involparent {
+  width: 100%;
+  overflow: hidden;
+}
+.inheromain {
+  padding: 10vh 0;
+  position: relative;
+  background: #1e1e1eb2;
+}
+.iherosub {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3% 0;
+  gap: 20px;
+}
+.iherosub h1 {
+  font-family: Plus Jakarta Sans;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 59.6px;
+  text-align: center;
+  color: white;
+}
+.iherosub h1 span {
+  color: #ffb600;
+}
+.iherobtn a {
+  font-family: Plus Jakarta Sans;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25.2px;
+  text-align: left;
+  padding: 10px 40px;
+  background-color: white;
+  color: black;
+}
+.iheroback {
+  position: absolute;
+  z-index: -23;
+  width: 100%;
+  height: 100%;
+}
+.iheroimg {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.intitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  gap: 15px;
+  margin: 5vh auto;
+}
+.intitle h1 {
+  font-family: Plus Jakarta Sans;
+  font-size: 36px;
+  font-weight: 800;
+
+  text-align: center;
+}
+.intitle p {
+  font-family: Plus Jakarta Sans;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.9px;
+  text-align: center;
+  width: 40%;
+}
+.informmain {
+  width: 95%;
+  padding: 4%;
+  margin: 5vh auto;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #0699ff;
+}
+.inform {
+  width: 60%;
+  margin: 0 auto;
+  padding: 2%;
+  display: flex;
+  gap: 15px;
+  background-color: white;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.inform h1 {
+  font-family: Plus Jakarta Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30.24px;
+  text-align: left;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+.invcon {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.invsub {
+  width: 45%;
+}
+.invsub label,
+.invsub input {
+  width: 100%;
+}
+.invsub input {
+  margin-top: 5px;
+  border: 1px solid black;
+  font-size: 16px;
+  padding: 9px 10px;
+  border-radius: 5px;
+}
+.informbtn {
+  text-align: center;
+}
+.informbtn .inforbutton {
+  color: white;
+  padding: 10px 30px;
+  background: black;
+  border-radius: 3px;
+}
+.inforbutton:hover {
+  background-color: blue;
+}
+.error {
+  color: red;
+}
+.success-message {
+  color: black;
+  height: 30px;
+  width: 100;
+}
+
+@media (max-width: 768px) {
+  .iherosub h1 {
+    font-family: Plus Jakarta Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 59.6px;
+    text-align: center;
+    color: white;
+  }
+  .intitle p {
+    font-family: Plus Jakarta Sans;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18.9px;
+    text-align: center;
+    width: 80%;
+  }
+  .inform {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2%;
+    display: flex;
+    gap: 15px;
+    background-color: white;
+    flex-direction: column;
+  }
+  .invsub {
+    width: 80%;
+  }
+}

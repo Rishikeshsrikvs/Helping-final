@@ -1,0 +1,331 @@
+.Admincontact {
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 16vh;
+}
+.admin-con-heading h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase;
+}
+.admincon-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.admin-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+.adcon-check {
+  margin: 5rem auto;
+  width: 327px;
+  height: 297px;
+  background: #001f34;
+  border-radius: 11px;
+  position: relative;
+}
+.adcon-check-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.con-check-name {
+  width: 100%;
+}
+.con-check-phone p,
+.con-check-email p,
+.con-check-message p,
+.con-check-name p {
+  width: 100%;
+  font-size: 10px;
+  color: #fff;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.con-check-phone h2,
+.con-check-email h2,
+.con-check-name h2 {
+  width: 100%;
+  font-size: 20px;
+  color: #00e5ff;
+  font-weight: 400;
+}
+.check-message-box {
+  margin-top: 10px;
+  font-size: 10px;
+  width: 290px;
+  height: 105px;
+  background: #fff;
+  color: #000;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 10px 8px;
+  text-transform: capitalize;
+}
+.check-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.con-check-btn {
+  width: 30%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ad-con-check-btn {
+  padding: 6px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #00e5ff;
+  color: #fff;
+}
+
+.adcon-check-noti-dot {
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  color: #fff;
+  background: #00e5ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+}
+/* ------------------ */
+.adcon-center-line {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.adcon-center-line p {
+  color: #000000;
+  padding-bottom: 5px;
+  margin: 0 4px;
+}
+.adcon-center-line span {
+  width: 90%;
+  height: 1px;
+  background-color: #000000;
+}
+/* ----------------------- */
+
+.adcon-completed {
+  width: 297px;
+  height: 277px;
+  background: #001f34;
+  border-radius: 11px;
+  position: relative;
+  margin: 5rem auto;
+}
+
+.adcon-completed-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.con-completed-name {
+  width: 100%;
+}
+.con-completed-phone p,
+.con-completed-email p,
+.con-completed-message p,
+.con-completed-name p {
+  width: 100%;
+  font-size: 10px;
+  color: #fff;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.con-completed-phone h2,
+.con-completed-email h2,
+.con-completed-name h2 {
+  width: 100%;
+  font-size: 20px;
+  color: #00e5ff;
+  font-weight: 400;
+}
+.completed-message-box {
+  margin-top: 10px;
+  font-size: 10px;
+  width: 267px;
+  height: 105px;
+  background: #fff;
+  color: #000;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 10px 8px;
+  text-transform: capitalize;
+}
+.completed-btn-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.con-completed-btn {
+  width: 30%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.ad-con-completed-btn {
+  padding: 6px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #00e5ff;
+  color: #fff;
+}
+.adcon-completed-noti-dot {
+  width: 42px;
+  height: 42px;
+  font-size: 22px;
+  color: #fff;
+  background: #00e5ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+}
+
+@media screen and (max-width: 480px) {
+  .Admincontact {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 6vh;
+  }
+
+  .admin-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .adcon-check {
+    margin: 3rem auto;
+    width: 227px;
+    height: 237px;
+    background: #001f34;
+    border-radius: 6px;
+    position: relative;
+  }
+  .admin-con-heading h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #000;
+    text-transform: uppercase;
+  }
+  .con-check-phone p,
+  .con-check-email p,
+  .con-check-message p,
+  .con-check-name p {
+    font-size: 7px;
+  }
+  .con-check-phone h2,
+  .con-check-email h2,
+  .con-check-name h2 {
+    font-size: 14px;
+  }
+  .check-message-box {
+    margin-top: 8px;
+    font-size: 8px;
+    width: 205px;
+    height: 75px;
+  }
+  .ad-con-check-btn {
+    padding: 4px 14px;
+    font-size: 10px;
+  }
+
+  .adcon-check-noti-dot {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    right: -10px;
+    top: -10px;
+  }
+
+  .adcon-completed {
+    margin: 3rem auto;
+    width: 227px;
+    height: 237px;
+  }
+  .adcon-completed-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .con-completed-phone p,
+  .con-completed-email p,
+  .con-completed-message p,
+  .con-completed-name p {
+    font-size: 7px;
+  }
+  .con-completed-phone h2,
+  .con-completed-email h2,
+  .con-completed-name h2 {
+    font-size: 14px;
+  }
+  .completed-message-box {
+    margin-top: 8px;
+    font-size: 8px;
+    width: 205px;
+    height: 75px;
+  }
+  .completed-btn-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .ad-con-completed-btn {
+    padding: 4px 14px;
+    font-size: 10px;
+  }
+  .adcon-completed-noti-dot {
+    width: 28px;
+    height: 28px;
+    font-size: 15px;
+    right: -10px;
+    top: -10px;
+  }
+}
