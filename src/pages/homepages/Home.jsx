@@ -13,6 +13,8 @@ import Donate from "./../suresh/components/Donate/Donate.jsx";
 import Donatenow from "./../suresh/components/DonateNow/DonateNow.jsx";
 import Involve from "./Involve.jsx";
 import Blooddonate from "./Blooddonate.jsx";
+import Privacy from "./Privacy.jsx";
+import Terms from "./Terms.jsx";
 
 const Home = () => {
   const [isImageVisible, setIsImageVisible] = useState(true);
@@ -36,7 +38,8 @@ const Home = () => {
           <Route path="/donatenow" element={<Donatenow />} />
           <Route path="/getinvolved" element={<Involve />} />
           <Route path="/blooddonate" element={<Blooddonate />} />
-
+          <Route path="/privacy_policy" element={<Privacy />} />
+          <Route path="/terms&conditions" element={<Terms />} />
           {/* Catch-all route that redirects to Land component */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

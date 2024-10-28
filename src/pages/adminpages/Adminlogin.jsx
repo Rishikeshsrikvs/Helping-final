@@ -5,6 +5,7 @@ import "./Adminlogin.css";
 import { useAuth } from "./auth/AuthContext"; // Import useAuth from AuthContext
 import api from "../../api/api"; // Assume you have a custom API instance
 import logo from "./../../assets/adminlogin/loginlogo.png";
+import { FaEye, FaEyeSlash } from "react-icons/fa"; 
 
 const Adminlogin = () => {
   const [showOtpPopup, setShowOtpPopup] = useState(false);
@@ -12,6 +13,7 @@ const Adminlogin = () => {
   const [adminPassword, setAdminPassword] = useState("");
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
   const [errorMessage, setErrorMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const otpPopupRef = useRef(null);
   const navigate = useNavigate();
 
@@ -122,11 +124,18 @@ const Adminlogin = () => {
             <div className="aloginin">
               <label>Password</label>
               <input
-                type="password"
+                type={showPassword ? "text" : "password"}
                 value={adminPassword}
                 autoComplete="off"
                 onChange={(e) => setAdminPassword(e.target.value)}
+                
               />
+              <span
+                className="password-toggle-icon"
+                onClick={() => setShowPassword((prev) => !prev)}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />} {/* Toggle between eye icons */}
+              </span>
             </div>
             <button className="aloginbtn" onClick={handleLoginSubmit}>
               Submit

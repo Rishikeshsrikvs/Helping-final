@@ -114,8 +114,18 @@
   text-transform: capitalize;
 }
 .fsubleft a span {
+ color: white;
+}
+.fsubright a{
+  
+  color: white;
+  margin-left:10px
+}
+.fsubright a:hover,.fsubleft a span:hover{
+  
   color: rgb(245, 133, 6);
 }
+
 @media (max-width: 768px) {
   .footsubparent {
     width: 80%;

@@ -103,7 +103,7 @@
 }
 
 .amount-control input {
-  width: 80px;
+  width: 120px;
   padding: 10px;
   text-align: center;
   border: 1px solid #ddd;
@@ -112,7 +112,7 @@
   color: black;
 }
 .controlamount {
-  width: 200px;
+  width: 400px;
   font-size: 18px;
 }
 .amount-control .decrement-btn,

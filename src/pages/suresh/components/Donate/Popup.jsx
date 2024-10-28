@@ -13,6 +13,15 @@ const Popup = ({ image, onClose, handlePay, selectedText }) => {
     // Call the handlePay function passed from Donate with the current values
     handlePay(amount, donationFrequency, selectedText);
   };
+
+  const handleAmountChange = (e) => {
+    const value = e.target.value;
+    // Ensure the input is a valid number or empty
+    if (!isNaN(value) && (value === "" || Number(value) >= 0)) {
+      setAmount(value === "" ? "" : Number(value));
+    }
+  };
+
   return (
     <div className="popup-overlay">
       <div
@@ -54,7 +63,12 @@ const Popup = ({ image, onClose, handlePay, selectedText }) => {
             <button className="decrement-btn" onClick={decrementAmount}>
               <span>-</span>
             </button>
-            <input type="number" value={amount} className="controlamount" />
+            <input
+              type="number"
+              value={amount}
+              onChange={handleAmountChange}
+              className="controlamount"
+            />
             <button className="increment-btn" onClick={incrementAmount}>
               <span>+</span>
             </button>

@@ -89,23 +89,18 @@
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   color: #fff;
 }
 .container-btns:hover {
   background: none;
-  border-left: 1px solid #fff;
+  
   border-radius: 0px;
-  border-right: 1px solid #fff;
+ 
   font-size: 22px;
 }
-.container-btns:active {
-  transform: scale(1.05);
-}
-.passionate {
-  width: 100%;
-  margin-top: 8rem;
-}
+
+
 .passionate .pass-con {
   width: 80%;
   margin: 0 auto;
@@ -259,24 +254,6 @@
     margin-bottom: 8rem;
   }
 
-  .container-btns {
-    width: 180px;
-    background: none;
-    font-size: 9px;
-    font-weight: 600;
-    font-style: italic;
-    transition: all 0.3s ease;
-  }
-  .container-btns:hover {
-    background: none;
-    border-left: 3px solid #fff;
-    border-radius: 0px;
-    border-right: 3px solid #fff;
-    font-size: 22px;
-  }
-  .container-btns:active {
-    transform: scale(1.1);
-  }
 
   .passionate {
     width: 100%;
@@ -397,24 +374,8 @@
     margin-bottom: 6rem;
   }
 
-  .container-btns {
-    width: 140px;
-    background: none;
-    font-size: 8.5px;
-    font-weight: 600;
-    font-style: italic;
-    transition: all 0.3s ease;
-  }
-  .container-btns:hover {
-    background: none;
-    border-left: 3px solid #fff;
-    border-radius: 0px;
-    border-right: 3px solid #fff;
-    font-size: 10px;
-  }
-  .container-btns:active {
-    transform: scale(1.05);
-  }
+
+ 
 
   .passionate {
     width: 100%;

@@ -171,7 +171,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+  box-shadow:0px 0px 10px black;}
 .left-qoutes h1 {
   color: #fff;
   font-size: 36px;
@@ -179,11 +179,12 @@
   font-weight: 800;
   line-height: 55px;
   text-transform: uppercase;
+  color: #fff; text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135; 
 }
 .center-qoutes {
   width: 400px;
   height: 250px;
-  background: #ffffff16;
+  background: #ffffff49;
   border: 1px solid #cccccc7c;
   border-radius: 20px;
   text-align: center;
@@ -191,14 +192,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow:0px 0px 10px black;
+  
 }
 .center-qoutes h1 {
   font-size: 66px;
   text-align: center;
   font-weight: 800;
   line-height: 55px;
+ margin-bottom: 20PX;
+
   text-transform: uppercase;
   color: #ffffff;
+
+  color: #fff; text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135; 
 }
 .center-qoutes h3 {
   font-size: 66px;
@@ -207,6 +214,7 @@
   line-height: 55px;
   text-transform: uppercase;
   color: #ffffff;
+  color: #fff; text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135; 
 }
 .center-qoutes .ls3-qoutes-btns {
   padding: 12px 30px;
@@ -232,6 +240,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-shadow:0px 0px 10px black;
 }
 .right-qoutes h1 {
   font-size: 20px;
@@ -241,6 +250,7 @@
   text-transform: capitalize;
   letter-spacing: 1.3px;
   color: #fff;
+  color: #fff; text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135; 
 }
 
 /* ---------------ls4---------------------- */

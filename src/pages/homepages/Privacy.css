@@ -1,0 +1,131 @@
+.terms-and-conditions-section {
+    max-width: 800px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center the section */
+    padding: 60px;
+    border: 1px solid #ccc; /* Light border for separation */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background */
+    font-family: 'Arial', sans-serif; /* Change font */
+    line-height: 1.6; /* Improved line spacing */
+}
+
+.terms-and-conditions-section h2 {
+    font-size: 28px; /* Main heading size */
+    color: #333; /* Dark text color */
+    text-align: center; /* Center align the title */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+.terms-and-conditions-section h3 {
+    font-size: 22px; /* Subheading size */
+    color: #555; /* Slightly lighter text for subheadings */
+    margin-top: 20px; /* Space above each subheading */
+    margin-bottom: 10px; /* Space below each subheading */
+}
+
+.terms-and-conditions-section p {
+    font-size: 16px; /* Normal text size */
+    color: #666; /* Lighter text color */
+    margin-bottom: 15px; /* Space below paragraphs */
+}
+
+.terms-and-conditions-section a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.terms-and-conditions-section a:hover {
+    text-decoration: underline; /* Underline on hover for better accessibility */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    .terms-and-conditions-section {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+
+    .terms-and-conditions-section h2 {
+        font-size: 24px; /* Smaller title size */
+    }
+
+    .terms-and-conditions-section h3 {
+        font-size: 20px; /* Smaller subheading size */
+    }
+
+    .terms-and-conditions-section p {
+        font-size: 14px; /* Smaller text size */
+    }
+}
+
+
+/* ------------------------------- */
+
+
+/* General styles for the privacy policy section */
+.privacy-policy-section {
+    background-color: #f9f9f9; /* Light background for readability */
+    padding:100px;
+    margin: 20px 0;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.privacy-policy-section h2 {
+    font-size: 2em; /* Large font for the main title */
+    color: #333; /* Dark color for contrast */
+    margin-bottom: 20px; /* Spacing below the title */
+}
+
+.privacy-policy-section h3 {
+    font-size: 1.5em; /* Medium font for subheadings */
+    color: #555; /* Slightly lighter than the main title */
+    margin-top: 20px; /* Spacing above each subheading */
+    margin-bottom: 10px; /* Spacing below each subheading */
+}
+
+.privacy-policy-section p {
+    font-size: 1em; /* Standard font size for paragraph text */
+    line-height: 1.6; /* Increased line height for better readability */
+    color: #444; /* Dark gray text color */
+    margin-bottom: 15px; /* Spacing between paragraphs */
+}
+
+.privacy-policy-section ul {
+    list-style-type: disc; /* Bulleted list style */
+    margin-left: 20px; /* Indentation for the list */
+}
+
+.privacy-policy-section li {
+    margin-bottom: 10px; /* Spacing between list items */
+}
+
+/* Styling for links */
+.privacy-policy-section a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.privacy-policy-section a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .privacy-policy-section {
+        padding: 15px; /* Less padding on smaller screens */
+    }
+
+    .privacy-policy-section h2 {
+        font-size: 1.5em; /* Smaller title on mobile */
+    }
+
+    .privacy-policy-section h3 {
+        font-size: 1.25em; /* Smaller subheadings on mobile */
+    }
+
+    .privacy-policy-section p,
+    .privacy-policy-section li {
+        font-size: 0.9em; /* Smaller text on mobile */
+    }
+}
+

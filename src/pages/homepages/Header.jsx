@@ -104,7 +104,7 @@ export const Header = () => {
         <div className="navcar">
           <li>
             <NavLink to="Donate" className={({ isActive }) => (isActive ? "active-link" : "")}>
-              Donate Us
+              Donate
             </NavLink>
           </li>
         </div>
