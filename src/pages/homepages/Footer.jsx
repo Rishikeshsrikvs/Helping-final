@@ -61,7 +61,7 @@ const Footer = () => {
               gift makes a difference.
             </p>
             <div className="footbtn">
-              <Link to="/donate"  >Donate</Link>
+              <Link to="/donate"  >DONATE</Link>
             </div>
             <ul className="footul navul" >
               <li>

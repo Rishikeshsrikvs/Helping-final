@@ -24,10 +24,11 @@
 .donate-text {
   width: 100%;
   height: auto;
-  margin-bottom: 15rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   flex-direction: column;
+  
 }
 .donate-text h2 {
   width: 70%;
@@ -58,6 +59,12 @@
   margin-top: 1.8rem;
   border-radius: 15px;
 }
+.selectfield{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
 
 @media screen and (max-width: 1025px) {
   .top-gallery {
@@ -77,6 +84,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    
   }
   .donate-text h2 {
     width: 90%;

@@ -81,7 +81,7 @@ const Donate = () => {
           name: "Helping Hands",
           description: "Donation Transaction",
           order_id: response.data.order.id,
-          callback_url: "localhost:5173/donate",
+          callback_url: "https://helpinghandscharitabletrustngo.org/Donate",
           prefill: {
             name: "",
             email: "",
@@ -157,6 +157,7 @@ const Donate = () => {
           {/* <button className="donate-btn" onClick={() => handlePay(25000, 'ONCE')} disabled={!razorpayKey}>Donate Now</button> */}
           {errorMessage && <div className="error-message">{errorMessage}</div>}
         </div>
+        <h1 className="selectfield" data-aos="zoom-out">Select the particular field to donate to</h1>
         <div className="cardgrid">
           <div className="card-grid">
             {cardData.map((card) => (

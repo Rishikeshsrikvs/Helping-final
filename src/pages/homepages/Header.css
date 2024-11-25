@@ -123,6 +123,9 @@ li {
 .navcar a.active-link {
   background-color: blue;
 }
+.navcar a.active-link:hover{
+  color: white;
+}
 /* Hidden state for the navbar */
 .navbar-container.hidden {
   top: -200px;
