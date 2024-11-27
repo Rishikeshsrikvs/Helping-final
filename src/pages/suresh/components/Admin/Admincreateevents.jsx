@@ -1,34 +1,101 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import api from "../../../../api/api";
 import "./Admincreateevents.css";
 import { useAuth } from "../../../adminpages/auth/AuthContext";
 
+const CLIENT_ID =
+  "785871534739-q4eetao566ch8ap03slvdet7145j9ig9.apps.googleusercontent.com";
+const API_KEY = "AIzaSyCHGRMagdRoKN2ycbNN9qkRnSV5BQrrJ5s";
+const SCOPES = "https://www.googleapis.com/auth/drive.file";
+
 const Admincreateevents = () => {
   const { token } = useAuth();
 
-  // State to handle form inputs
+  // State for form fields
   const [eventName, setEventName] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [eventLocation, setEventLocation] = useState("");
   const [eventDesc, setEventDesc] = useState("");
   const [eventImage, setEventImage] = useState(null);
 
-  // State for success message
+  // State for Drive integration
+  const [pickerApiLoaded, setPickerApiLoaded] = useState(false);
+  const [oauthToken, setOauthToken] = useState(null);
+
+  // State for validation and success messages
+  const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
 
-  // State for form validation errors
-  const [errors, setErrors] = useState({});
+  // Load Google Picker API on component mount
+  useEffect(() => {
+    window.gapi.load("picker", { callback: onPickerApiLoad });
+  }, []);
 
-  // Utility function to format date as dd/mm/yyyy
-  const formatDate = (dateStr) => {
-    const date = new Date(dateStr);
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
-    const year = date.getFullYear();
-    return `${day}/${month}/${year}`;
+  const onPickerApiLoad = () => {
+    setPickerApiLoaded(true);
   };
 
-  // Function to validate form inputs
+  const handleGoogleLogin = () => {
+    const client = window.google.accounts.oauth2.initTokenClient({
+      client_id: CLIENT_ID,
+      scope: SCOPES,
+      callback: (tokenResponse) => {
+        setOauthToken(tokenResponse.access_token);
+      },
+    });
+    client.requestAccessToken();
+  };
+
+  const openPicker = () => {
+    if (!pickerApiLoaded) {
+      alert("Google Picker API not loaded yet");
+      return;
+    }
+
+    if (!oauthToken) {
+      handleGoogleLogin();
+      return;
+    }
+
+    const picker = new window.google.picker.PickerBuilder()
+      .addView(window.google.picker.ViewId.DOCS_IMAGES)
+      .setOAuthToken(oauthToken)
+      .setDeveloperKey(API_KEY)
+      .setCallback(pickerCallback)
+      .build();
+
+    picker.setVisible(true);
+  };
+
+  const pickerCallback = async (data) => {
+    if (
+      data[window.google.picker.Response.ACTION] ===
+      window.google.picker.Action.PICKED
+    ) {
+      const file = data[window.google.picker.Response.DOCUMENTS][0];
+      const fileId = file[window.google.picker.Document.ID];
+      const fileName = file[window.google.picker.Document.NAME];
+
+      const response = await fetch(
+        `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
+        {
+          headers: {
+            Authorization: `Bearer ${oauthToken}`,
+          },
+        }
+      );
+
+      if (response.ok) {
+        const blob = await response.blob();
+        const newFile = new File([blob], fileName, { type: file.mimeType });
+        setEventImage(newFile);
+      } else {
+        console.error("Error fetching the file:", response.statusText);
+      }
+    }
+  };
+
+  // Validation function
   const validateForm = () => {
     const newErrors = {};
     if (!eventName) newErrors.eventName = "Event name is required";
@@ -39,29 +106,24 @@ const Admincreateevents = () => {
     return newErrors;
   };
 
-  // Function to handle form submission
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Validate form before submitting
     const formErrors = validateForm();
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
       return;
     }
 
-    // Format the eventDate to dd/mm/yyyy
-    const formattedDate = formatDate(eventDate);
-
     const formData = new FormData();
     formData.append("event_name", eventName);
-    formData.append("event_date", formattedDate); // Use the formatted date
+    formData.append("event_date", eventDate);
     formData.append("event_location", eventLocation);
     formData.append("event_desc", eventDesc);
-    formData.append("eventImage", eventImage); // append image file
+    formData.append("eventImage", eventImage);
 
     try {
-      const response = await api.post("/admin/event", formData, {
+      await api.post("/admin/event", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           authorization: token,
@@ -69,23 +131,16 @@ const Admincreateevents = () => {
       });
 
       setSuccessMessage("Event created successfully");
-
-      // Reset form fields
       setEventName("");
       setEventDate("");
       setEventLocation("");
       setEventDesc("");
       setEventImage(null);
-      setErrors({}); // Clear any previous errors
+      setErrors({});
     } catch (error) {
       console.error("Error uploading event:", error);
       alert("Failed to create event");
     }
-  };
-
-  // Function to handle file input change
-  const handleFileChange = (e) => {
-    setEventImage(e.target.files[0]);
   };
 
   return (
@@ -93,6 +148,7 @@ const Admincreateevents = () => {
       <h1 className="admincreate-event-title">CREATE EVENTS</h1>
       <div className="admincreate-event-container">
         <form className="admincreate-event-form" onSubmit={handleSubmit}>
+          {/* Other form fields */}
           <div className="admincreate-form-row">
             <div className="admincreate-form-group">
               <label htmlFor="event-name">
@@ -152,20 +208,34 @@ const Admincreateevents = () => {
               ></textarea>
               {errors.eventDesc && <p className="error">{errors.eventDesc}</p>}
             </div>
-
-            <div className="admincreate-form-group admincreate-image-upload">
-              <label htmlFor="event-image">
-                <span className="spanred">*</span>IMAGE :
+            <div className="admincreate-form-group admincreateevent">
+              <span className="spanred">*</span>IMAGE :
+              <label className="admincreate-upload-btn" htmlFor="event-image">
+                UPLOAD IMAGE
               </label>
-
               <input
                 type="file"
                 id="event-image"
                 name="event-image"
                 accept="image/*"
-                onChange={handleFileChange}
+                onChange={(e) => setEventImage(e.target.files[0])}
               />
               <p>{eventImage ? eventImage.name : "No file selected"}</p>
+              <div className="or">
+                <span className="adgalline"></span>
+                <p>or</p>
+                <span className="adgalline"></span>
+              </div>
+              <button
+                type="button"
+                className="admincreate-submit-btn"
+                onClick={openPicker}
+              >
+                Select from Drive
+              </button>
+              {errors.eventImage && (
+                <p className="error">{errors.eventImage}</p>
+              )}
             </div>
           </div>
 
@@ -174,7 +244,6 @@ const Admincreateevents = () => {
           </button>
         </form>
 
-        {/* Display success message */}
         {successMessage && <p className="success-message">{successMessage}</p>}
       </div>
     </div>

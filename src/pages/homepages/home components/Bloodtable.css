@@ -2,6 +2,7 @@
   width: 80%;
   margin: 5vh auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 20px;
 }
 .bloodtable {
   border: none;
@@ -12,6 +13,8 @@
 .bloodtablemain h1,
 .bloodtablemain p {
   text-align: center;
+  margin: 10px auto;
 }
+
 @media screen and (max-width: 768px) {
 }

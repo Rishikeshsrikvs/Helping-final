@@ -32,7 +32,7 @@ const Donate = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
     // Fetch Razorpay Key from the backend
     const fetchRazorpayKey = async () => {
@@ -71,7 +71,6 @@ const Donate = () => {
 
       if (response.data.order) {
         setOrder(response.data.order);
-       
 
         // Initialize Razorpay only after getting a valid order and key
         const options = {
@@ -108,7 +107,6 @@ const Donate = () => {
 
   // Function to handle image click
   const handleImageClick = (imageUrl, text) => {
-    
     setSelectedImage(imageUrl); // Set the selected image dynamically
     setSelectedText(text); // Set the selected donation type text
     setShowPopup(true); // Show the popup
@@ -155,14 +153,15 @@ const Donate = () => {
             them towards a life of dignity and hope for a brighter future.
           </p>
           {/* <button className="donate-btn" onClick={() => handlePay(25000, 'ONCE')} disabled={!razorpayKey}>Donate Now</button> */}
-          {errorMessage && <div className="error-message">{errorMessage}</div>}
+          {/* {errorMessage && <div className="error-message">{errorMessage}</div>} */}
         </div>
-        <h1 className="selectfield" data-aos="zoom-out">Select the particular field to donate to</h1>
+        <h1 className="selectfield" data-aos="zoom-out">
+          Select the particular field to donate to
+        </h1>
         <div className="cardgrid">
           <div className="card-grid">
             {cardData.map((card) => (
               <Card
-                
                 key={card.id}
                 imageUrl={card.imageUrl}
                 text={card.text}

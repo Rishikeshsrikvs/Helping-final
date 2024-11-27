@@ -16,7 +16,7 @@ const Blooddonate = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
   }, []);
   const [selectedBloodGroup, setSelectedBloodGroup] = useState("");
@@ -27,7 +27,7 @@ const Blooddonate = () => {
 
   return (
     <div className="bloodmain">
-      <section className="bdhero" >
+      <section className="bdhero">
         <h1 data-aos="zoom-in">
           Your Paint Has The <span className="color-red">Power</span> To Paint
         </h1>
@@ -44,9 +44,16 @@ const Blooddonate = () => {
         </h4>
 
         <div className="image-row" data-aos="zoom-out">
-          <img src={bl1} alt="Description of image 1" />
-          <img src={bl2} alt="Description of image 2" />
-          <img src={bl3} alt="Description of image 3" />
+          <div className="imgcon">
+            <img src={bl2} alt="Description of image 1" />
+            <img src={bl1} alt="Description of image 2" />
+            <img src={bl3} alt="Description of image 3" />
+          </div>
+          <span className="imdonate">
+            Donate
+            <br />
+            Now
+          </span>
         </div>
       </section>
 

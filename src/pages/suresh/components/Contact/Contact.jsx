@@ -26,9 +26,8 @@ const Contact = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
-
   }, []);
   // State to handle form validation errors
   const [errors, setErrors] = useState({});
@@ -102,9 +101,11 @@ const Contact = () => {
         email: "",
         message: "",
       });
+      setTimeout(() => {
+        setSuccessMessage("");
+      }, 5000);
     } catch (error) {
       console.error("There was an error submitting the form:", error);
-      alert("Form submission failed.");
     }
   };
 
@@ -117,7 +118,7 @@ const Contact = () => {
           </div>
           <div className="contact-content">
             <div className="contact-text">
-              <h1  data-aos="fade-right">
+              <h1 data-aos="fade-right">
                 “ Helping one person might not change the whole world, but it
                 could change the world for one person ”
               </h1>
@@ -147,7 +148,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="conform-container" data-aos="zoom-in">
-            <form onSubmit={handleSubmit} >
+            <form onSubmit={handleSubmit}>
               <div className="conform-row">
                 <div className="conform-group">
                   <label htmlFor="contactName">
@@ -163,7 +164,6 @@ const Contact = () => {
                   {errors.contactName && (
                     <p className="error">{errors.contactName}</p>
                   )}
-                  <p>First Name</p>
                 </div>
                 <div className="conform-group">
                   <label htmlFor="contact">
@@ -177,7 +177,7 @@ const Contact = () => {
                     required
                   />
                   {errors.contact && <p className="error">{errors.contact}</p>}
-                  <p>Enter Your Number</p>
+                  {/* <p>Enter Your Number</p> */}
                 </div>
               </div>
               <div className="conform-row">
@@ -193,7 +193,7 @@ const Contact = () => {
                     required
                   />
                   {errors.email && <p className="error">{errors.email}</p>}
-                  <p>Example@Example.Com</p>
+                  {/* <p>Example@Example.Com</p> */}
                 </div>
               </div>
               <div className="conform-row">

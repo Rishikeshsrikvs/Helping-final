@@ -25,7 +25,6 @@ import { useNavigate } from "react-router-dom";
 const AboutUs = () => {
   const navigate = useNavigate();
 
-  
   const [years, setYears] = useState([]); // State for storing years
   const [error, setError] = useState(null); // State for handling errors
   const [selectedYearId, setSelectedYearId] = useState(""); // State for selected year ID
@@ -35,7 +34,7 @@ const AboutUs = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
     const fetchYears = async () => {
       try {
@@ -99,7 +98,11 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="about-content">
-          <div className="about-box box1" data-aos="flip-up" data-aos-duration="1000">
+          <div
+            className="about-box box1"
+            data-aos="flip-up"
+            data-aos-duration="1000"
+          >
             <h2>our vision</h2>
             <p>
               A contented, robust, and imaginative youngster, whose rights are
@@ -107,7 +110,11 @@ const AboutUs = () => {
               and respect for human dignity.
             </p>
           </div>
-          <div className="about-box box2" data-aos="flip-up" data-aos-duration="1000">
+          <div
+            className="about-box box2"
+            data-aos="flip-up"
+            data-aos-duration="1000"
+          >
             <h2>our mission</h2>
             <p>
               to promote an atmosphere where youth and young adults can lead,
@@ -135,12 +142,11 @@ const AboutUs = () => {
                   autoPlay
                   loop
                   muted
-                  
                 >
                   <source src={video1} type="video/mp4" />
                 </video>
               </div>
-              <div className="video-box video2"  data-aos="fade-left">
+              <div className="video-box video2" data-aos="fade-left">
                 <video
                   width={"100%"}
                   height={"100%"}
@@ -148,7 +154,6 @@ const AboutUs = () => {
                   autoPlay
                   loop
                   muted
-                 
                 >
                   <source src={video2} type="video/mp4" />
                 </video>
@@ -156,12 +161,12 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-        <div className="about-gallery"  data-aos="zoom-out">
+        <div className="about-gallery" data-aos="zoom-out">
           <div className="about-gallery-container">
             <div className="gallery-con1">
               <div className="gallery1">
                 <div className=" gall1">
-                  <img src={gall1} alt="gallery"/>
+                  <img src={gall1} alt="gallery" />
                 </div>
                 <div className=" gall1">
                   <img src={gall2} alt="gallery" />
@@ -195,7 +200,7 @@ const AboutUs = () => {
             <h3 data-aos="fade-down">
               Share your joy by making someone else smile on your special day
             </h3>
-            <p  data-aos="fade-up">
+            <p data-aos="fade-up">
               Celebrate your special occasions by sharing joy with those in
               need. Instead of just receiving, give back to others. Whether it's
               a birthday, anniversary, or any milestone, make it meaningful by
@@ -206,7 +211,7 @@ const AboutUs = () => {
             <button
               className="abs-dn-button"
               onClick={() => navigate("/donate")}
-               data-aos="fade-up"
+              data-aos="fade-up"
             >
               Donate now
             </button>
@@ -218,7 +223,7 @@ const AboutUs = () => {
           </div>
           <div className="volunteers">
             <div className="volunteers-image" data-aos="fade-up">
-              <img src={gall7} alt="gallery"  />
+              <img src={gall7} alt="gallery" />
             </div>
             <div className="volunteers-text" data-aos="fade-up">
               <p>
@@ -250,18 +255,15 @@ const AboutUs = () => {
         </div>
         <div className="about-annual-report">
           <div className="annual-report-tittle">
-            <h3  data-aos="zoom-in">ANNUAL REPORT</h3>
+            <h3 data-aos="zoom-in">ANNUAL REPORT</h3>
           </div>
-          <div className="annual-btn"  data-aos="fade-right">
+          <div className="annual-btn" data-aos="fade-right">
             <select
               className="year-dropdown"
               value={selectedYearId || ""}
               onChange={handleYearChange}
             >
               {/* Default option */}
-              <option value="" disabled>
-                Year
-              </option>
 
               {/* Render years dynamically */}
               {years.map((year) => (

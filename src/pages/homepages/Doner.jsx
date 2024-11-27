@@ -10,7 +10,7 @@ const Doner = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
   }, []);
   // State to manage form input values
@@ -69,6 +69,7 @@ const Doner = () => {
 
       if (response.status === 201) {
         setSubmissionStatus("Form submitted successfully!");
+
         // Reset form fields
         setFormData({
           name: "",
@@ -78,6 +79,11 @@ const Doner = () => {
           city: "",
           area: "",
         });
+
+        // Clear success message after 4 seconds
+        setTimeout(() => {
+          setSubmissionStatus(null);
+        }, 4000);
       } else {
         setSubmissionStatus("Failed to submit the form. Please try again.");
       }
@@ -87,7 +93,7 @@ const Doner = () => {
   };
 
   return (
-    <div className="donner" >
+    <div className="donner">
       <div className="form-container" data-aos="zoom-in">
         <h1 className="form-title">
           BLOOD <span className="highlight">DONORS</span>

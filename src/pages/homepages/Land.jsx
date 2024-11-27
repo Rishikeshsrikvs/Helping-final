@@ -36,9 +36,9 @@ const Land = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
-  },[]);
+  }, []);
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -59,7 +59,7 @@ const Land = () => {
       <Grandvolunteer />
       <Landevent />
 
-      <div className="land3main"  data-aos="zoom-in">
+      <div className="land3main" data-aos="zoom-in">
         <h1>
           “help is different from ‘timely help’ sending some many to an
           orphanage every month is a help, but spontaneously helping during a
@@ -74,7 +74,9 @@ const Land = () => {
             need—every small action counts.
           </p>
           <div className="l10leftbtn">
-            <button onClick={() => navigate("/getinvolved")} data-aos="fade-up">Let's Help</button>
+            <button onClick={() => navigate("/getinvolved")} data-aos="fade-up">
+              Let's Help
+            </button>
           </div>
         </div>
         <div className="l10right" data-aos="fade-left">
@@ -107,7 +109,7 @@ const Land = () => {
         </div>
       </div>
       <div className="land5main">
-        <div className="land5card1"  data-aos="flip-up" data-aos-duration="7000">
+        <div className="land5card1" data-aos="flip-up" data-aos-duration="7000">
           <span>our vision</span>
           <p>
             A contented, robust, and imaginative youngster, whose rights are
@@ -127,7 +129,7 @@ const Land = () => {
       <Landprogram />
       <div className="land6main">
         <h1 data-aos="fade-right">Who We Are</h1>
-        <div className="land6split"  >
+        <div className="land6split">
           <div className="l6left" data-aos="zoom-in">
             <img src={l61} alt="" className="l61" />
             <div className="l6leftdown">
@@ -148,7 +150,11 @@ const Land = () => {
               everyone's future.
             </p>
             <div className="l6rightbtn">
-              <button onClick={() => navigate("/donate")} data-aos="fade-left">
+              <button
+                className="btn-flip"
+                onClick={() => navigate("/donate")}
+                data-aos="fade-left"
+              >
                 JOIN THE MOVEMENT
               </button>
             </div>
@@ -207,22 +213,22 @@ const Land = () => {
         <h1 data-aos="zoom-out">Gallery</h1>
         <div className="l9gal">
           <div className="l9left">
-            <img src={l9left} alt="" data-aos="fade-right"/>
+            <img src={l9left} alt="" data-aos="fade-right" />
           </div>
 
-          <div className="l9c1" >
-            <img src={l91} alt="" data-aos="fade-down-right"/>
+          <div className="l9c1">
+            <img src={l91} alt="" data-aos="fade-down-right" />
 
-            <img src={l92} alt="" data-aos="fade-up-right"/>
+            <img src={l92} alt="" data-aos="fade-up-right" />
           </div>
           <div className="l9c2">
             <img src={l93} alt="" data-aos="fade-down-left" />
 
-            <img src={l94} alt="" data-aos="fade-up-left"/>
+            <img src={l94} alt="" data-aos="fade-up-left" />
           </div>
 
           <div className="l9right">
-            <img src={l9right} alt="" data-aos="fade-left"/>
+            <img src={l9right} alt="" data-aos="fade-left" />
           </div>
         </div>
       </div>

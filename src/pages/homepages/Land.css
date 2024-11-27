@@ -82,7 +82,7 @@
   font-size: 24px;
   font-style: italic;
   font-weight: 800;
-
+  line-height: 45px;
   text-align: center;
   width: 80%;
 }
@@ -119,7 +119,7 @@
 }
 .l61 {
   width: 500px;
- 
+
   margin-bottom: 20px;
 }
 .l6leftdown {
@@ -139,7 +139,6 @@
   height: 100%;
   gap: 40px;
   justify-content: space-evenly;
-  
 }
 .l6right h1 {
   font-family: Plus Jakarta Sans;
@@ -148,7 +147,7 @@
   line-height: 60.4px;
   text-align: left;
 }
-.l6right p{
+.l6right p {
   font-family: Plus Jakarta Sans;
   font-size: 25px;
   font-weight: 500;
@@ -159,16 +158,19 @@
 .l6right span {
   color: #0699ff;
 }
-.l6rightbtn{
+.l6rightbtn {
   padding-left: 40px;
+  position: relative;
+  overflow: visible;
 }
 .l6rightbtn button {
   color: white;
-  background-color: #0699ff;
+
   padding: 10px 40px;
   font-family: Plus Jakarta Sans;
   font-size: 20px;
   font-weight: 600;
+  overflow: hidden;
   line-height: 25.2px;
   text-align: left;
   width: unset;
@@ -319,7 +321,6 @@
   margin: 0 auto;
 }
 .l9gal img {
- 
   width: 100%;
 }
 .l9left,
@@ -384,6 +385,9 @@
 }
 .l10leftbtn > button:hover {
   background-color: black;
+
+  transform: scale(3); /* Slightly enlarges the button */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .l10right {
   width: 50%;
@@ -505,7 +509,7 @@
     margin-top: 20px;
     text-align: center;
   }
-  .land4card > h2{
+  .land4card > h2 {
     text-align: center;
   }
   .land4card > img {
@@ -522,11 +526,11 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 5px;
-    justify-content: space-between;
+    gap: 15px;
+    justify-content: space-evenly;
   }
   .land5main > div {
-    height: 300px;
+    height: 180px;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -534,13 +538,14 @@
     padding: 1%;
     border-radius: 9px;
     text-transform: uppercase;
+    margin-bottom: 20px;
   }
   .land5main > div > span {
     font-family: Plus Jakarta Sans;
-    font-size: 20px;
+    font-size: 18px;
     font-style: italic;
     font-weight: 800;
-    line-height: 45.36px;
+    line-height: 30.36px;
     text-align: left;
     color: white;
     margin-bottom: 10px;
@@ -549,12 +554,13 @@
   .land5main > div > p {
     color: white;
     font-family: Plus Jakarta Sans;
-    font-size: 17px;
+    font-size: 11px;
     font-style: italic;
     font-weight: 800;
+    line-height: 19px;
 
     text-align: center;
-    width: 80%;
+    width: 90%;
   }
 
   .land6main {
@@ -620,7 +626,7 @@
     margin: 0 auto;
     text-align: center;
   }
-  .l6rightbtn{
+  .l6rightbtn {
     padding-left: unset;
   }
   .land7main {
@@ -634,9 +640,11 @@
   .l6rightbtn {
     text-align: center;
   }
-  .l6rightbtn button{
+  .l6rightbtn button {
     font-size: 12px;
-    
+  }
+  .l6rightbtn button:hover {
+    background-color: black;
   }
   .l7text {
     width: 100%;
@@ -678,16 +686,15 @@
   .l7imgcon > div > p {
     font-size: 12px;
   }
-  .l7img{
+  .l7img {
     height: 190px;
-
   }
   .l7img img {
     width: 100%;
     height: 100%;
     border-radius: 5px;
   }
-    .land8main {
+  .land8main {
     width: 98%;
     margin: 10vh auto;
     background-color: #0699ff;
@@ -735,21 +742,19 @@
     text-align: center;
   }
   .l9left,
-  .l9right,.l9c1,.l9c2 {
+  .l9right,
+  .l9c1,
+  .l9c2 {
     width: 49%;
     height: 50%;
     overflow: hidden;
     margin-bottom: 10px;
-
-    
- 
   }
-  .l9left{
+  .l9left {
     height: 50%;
   }
   .l9c1,
   .l9c2 {
-    
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -766,4 +771,42 @@
     padding: 10%;
     height: 50vh;
   }
+}
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #fff;
+  background-color: #0699ff;
+
+  position: relative;
+  text-align: center;
+
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  transition: color 0.5s; /* Smooth text color transition */
+  z-index: 1786; /* Ensure the button is above the pseudo-element */
+  overflow: hidden; /* Prevent the pseudo-element from overflowing */
+}
+
+.btn-flip::after {
+  content: "";
+  position: absolute;
+  top: 0; /* Start above the button */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -143; /* Ensure it stays behind the button */
+  background: black;
+  transform: translateX(-100%);
+  transform: translateY(-100%);
+  transition: transform 0.5s ease; /* Smooth transition effect */
+  /* Reset transformation initially */
+}
+
+.btn-flip:hover::after {
+  transform: translateX(0);
+  transform: translateY(0);
+  height: 100%; /* Slide in to fill the button */
 }

@@ -11,12 +11,11 @@ const Bloodtable = ({ selectedBloodGroup }) => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
-  },[]);
+  }, []);
 
   useEffect(() => {
-
     const fetchDonors = async () => {
       if (!selectedBloodGroup) {
         // Clear the donors list if no blood group is selected
@@ -49,7 +48,7 @@ const Bloodtable = ({ selectedBloodGroup }) => {
   }, [selectedBloodGroup]);
 
   return (
-    <div className="bloodtablemain"  data-aos="fade-up">
+    <div className="bloodtablemain" data-aos="fade-up">
       <h1>LIST OF DONORS</h1>
       <p>Selected blood group: {selectedBloodGroup || "All"}</p>
 

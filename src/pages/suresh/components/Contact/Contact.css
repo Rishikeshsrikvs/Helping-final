@@ -279,6 +279,9 @@ button:active {
   font-size: 24px;
   margin: 6rem auto;
 }
+.contactUs .success-message {
+  color: white;
+}
 
 @media screen and (max-width: 768px) {
   .contact-heading h1 {

@@ -10,13 +10,12 @@ const Landevent = () => {
 
   // Fetch events data from API
   useEffect(() => {
-    
-      window.scrollTo(0, 0);
-      AOS.init({
-        duration: 2000, // Animation duration in ms
-        once: false,     // Whether animation should happen only once
-      });
-    
+    window.scrollTo(0, 0);
+    AOS.init({
+      duration: 2000, // Animation duration in ms
+      once: false, // Whether animation should happen only once
+    });
+
     const fetchEvents = async () => {
       try {
         const response = await api.get("/getevent");
@@ -70,7 +69,7 @@ const Landevent = () => {
             </div>
           ))
         ) : (
-          <p>Loading events...</p>
+          <p>Stay tuned! No events scheduled yet.</p>
         )}
       </div>
     </div>

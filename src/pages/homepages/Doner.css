@@ -1,6 +1,6 @@
 .form-container {
   width: 60%;
-  height: 80vh;
+  height: 70vh;
   margin: auto;
   background-color: #111;
   padding: 30px;
@@ -9,15 +9,16 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .form-title {
   width: 100%;
   color: white;
-  font-size: 34px;
-  margin-bottom: 20px;
+  font-size: 39px;
+  margin-bottom: 10px;
+  letter-spacing: 5px;
 }
 
 .form-title .highlight {
@@ -32,7 +33,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 
 .form-group {

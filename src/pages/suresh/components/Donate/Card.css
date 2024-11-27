@@ -64,6 +64,9 @@
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .dcardback h1 {
+    font-size: 10px;
+  }
 }
 @media (max-width: 480px) {
   .card-grid {

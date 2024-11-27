@@ -2,7 +2,7 @@
   width: 60%;
   margin: 10vh auto;
 
-  padding: 80px;
+  padding: 50px;
   background-color: #ffffff;
   border-radius: 20px;
   border-block-color: #000000;
@@ -11,7 +11,7 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 .request-container input,
 .request-group select {
@@ -19,6 +19,7 @@
   border: 1px solid black;
   color: #ffffff;
   padding: 8px 5px;
+  font-size: 20px;
   border-radius: 5px;
 }
 
@@ -26,7 +27,7 @@
   font-size: 34px;
   color: #000000;
 
-  margin-bottom: 20px;
+  margin-bottom: 70px;
 }
 
 .request-title .highlight {
@@ -36,12 +37,14 @@
 .request-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+  gap: 50px;
 }
 
 .request-group {
-  width: 30%;
+  /* width: 30%; */
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 
@@ -76,7 +79,9 @@
   background-color: rgb(136, 133, 133);
   color: red;
 }
-
+.submission-status {
+  margin: 20px auto;
+}
 @media screen and (max-width: 768px) {
   .request-container {
     width: 80%;

@@ -86,8 +86,6 @@
   margin-right: 5px;
 }
 
-
-
 .center-elements {
   height: 100%;
   margin: 0 auto;
@@ -95,6 +93,15 @@
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
+}
+.admincreateevent {
+  background-color: #fff;
+  width: 50%;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .admincreate-upload-btn,
 .admincreate-submit-btn {

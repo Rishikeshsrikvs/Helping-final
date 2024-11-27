@@ -114,15 +114,14 @@
   text-transform: capitalize;
 }
 .fsubleft a span {
- color: white;
-}
-.fsubright a{
-  
   color: white;
-  margin-left:10px
 }
-.fsubright a:hover,.fsubleft a span:hover{
-  
+.fsubright a {
+  color: white;
+  margin-left: 10px;
+}
+.fsubright a:hover,
+.fsubleft a span:hover {
   color: rgb(245, 133, 6);
 }
 
@@ -131,13 +130,12 @@
     width: 80%;
     height: 100%;
     position: absolute;
-    border-top-left-radius: 0px 0%; /* Adjust to match your design */
-    border-bottom-left-radius: 0px 0%;
-    border-top-right-radius: 0px 0%;
-    border-bottom-right-radius: 0px 0%;
+    border-top-left-radius: 100px 100%;
+    border-bottom-left-radius: 60px 100%;
+    border-top-right-radius: 100px 100%;
+    border-bottom-right-radius: 60px 100%;
     margin-left: -20px;
     display: flex;
-
     flex-direction: column;
     align-items: center;
     background-color: #0699ff;
@@ -188,11 +186,11 @@
     border-top: 1px solid white;
     display: flex;
     flex-direction: column;
-  
+
     justify-content: space-between;
     align-items: center;
   }
- 
+
   .footsub a {
     font-family: Plus Jakarta Sans;
     font-size: 12px;
