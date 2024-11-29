@@ -64,15 +64,21 @@ const Admindonner = () => {
             </tr>
           </thead>
           <tbody>
-            {donors.map((donor, index) => (
-              <tr key={index}>
-                <td className="d-td">{donor.donorName}</td>
-                <td className="d-td">{donor.donorCity}</td>
-                <td className="d-td">{donor.donorArea}</td>
-                <td className="d-td">{donor.donorContact}</td>
-                <td className="d-td">{donor.donorBloodGrp}</td>
+            {donors.length > 0 ? (
+              donors.map((donor, index) => (
+                <tr key={index}>
+                  <td className="d-td">{donor.donorName}</td>
+                  <td className="d-td">{donor.donorCity}</td>
+                  <td className="d-td">{donor.donorArea}</td>
+                  <td className="d-td">{donor.donorContact}</td>
+                  <td className="d-td">{donor.donorBloodGrp}</td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5">No donors found</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

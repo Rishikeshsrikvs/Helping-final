@@ -13,7 +13,8 @@ export const Header = () => {
   let lastScrollTop = 0;
 
   const handleScroll = () => {
-    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const currentScrollTop =
+      window.pageYOffset || document.documentElement.scrollTop;
 
     // Change visibility of the navbar
     if (currentScrollTop > lastScrollTop) {
@@ -29,7 +30,6 @@ export const Header = () => {
   };
 
   useEffect(() => {
-   
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -53,7 +53,11 @@ export const Header = () => {
   };
 
   return (
-    <div className={`navbar-container ${isVisible ? "visible" : "hidden"} ${isScrolled ? "scrolled" : ""}`}>
+    <div
+      className={`navbar-container ${isVisible ? "visible" : "hidden"} ${
+        isScrolled ? "scrolled" : ""
+      }`}
+    >
       {isLoading && <div className="overlay"></div>} {/* Loading overlay */}
       <div className="navbar-logo">
         <NavLink to="/">
@@ -71,45 +75,66 @@ export const Header = () => {
       <div className={`navcontainer ${isMenuOpen ? "active" : ""}`}>
         <ul className="navul">
           <li>
-            <NavLink to="About" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="About"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               About Us
             </NavLink>
           </li>
           <li>
-            <NavLink to="ourprogram" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="ourprogram"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Our Programs
             </NavLink>
           </li>
           <li>
-            <NavLink to="media" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="media"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Media
             </NavLink>
           </li>
           <li>
-            <NavLink to="blooddonate" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="blooddonate"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Blood Donation
             </NavLink>
           </li>
           <li>
-            <NavLink to="getinvolved" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="getinvolved"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Get Involved
             </NavLink>
           </li>
           <li>
-            <NavLink to="Connect" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="Connect"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Contact Us
             </NavLink>
           </li>
         </ul>
         <div className="navcar">
           <li>
-            <NavLink to="Donate" className={({ isActive }) => (isActive ? "active-link" : "")}>
+            <NavLink
+              to="Donate"
+              className={({ isActive }) => (isActive ? "active-link" : "")}
+            >
               Donate
             </NavLink>
           </li>
         </div>
       </div>
-      <a className="upcm" onClick={goToUpcomingEvents} w>
+      <a className="upcm " onClick={goToUpcomingEvents} w>
         UPCOMMING EVENTS
       </a>
     </div>

@@ -74,10 +74,10 @@
   color: white;
 }
 .footbtn a {
-  font-family: Plus Jakarta Sans;
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 18px;
   font-weight: 600;
-
+  position: absolute;
   text-align: center;
   color: #ffffff;
   background-color: black;
@@ -85,11 +85,36 @@
   margin: 0 auto;
   border: none;
   border-radius: 8px;
+  overflow: hidden;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: color 0.5s ease; /* Smooth text color transition */
+  /* Ensures ::after does not overflow */
 }
+
+.footbtn a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 6px;
+  transform: translate(-100%, -100%);
+  transition: transform 0.5s ease; /* Smooth transition effect */
+  z-index: -1; /* Ensure it stays behind the button */
+}
+
+.footbtn a:hover::after {
+  transform: translate(0, 0); /* Reset the translation on hover */
+}
+
 .footbtn a:hover {
-  background-color: #ffffff;
   color: black;
+  z-index: 234; /* Change text color on hover */
 }
+
 .footul {
   display: flex;
   flex-direction: row;

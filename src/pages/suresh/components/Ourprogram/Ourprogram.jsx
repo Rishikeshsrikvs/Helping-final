@@ -30,7 +30,7 @@ const Ourprogram = () => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
   }, []);
   const renderSection = () => {
@@ -110,10 +110,10 @@ const Ourprogram = () => {
                     <img src={hc1} alt="Healthcare 1" />
                   </div>
                   <div className="hc-image2">
-                    <img src={hc2} alt="Healthcare 2" />
+                    <img src={hc3} alt="Healthcare 2" />
                   </div>
                   <div className="hc-image3">
-                    <img src={hc3} alt="Healthcare 3" />
+                    <img src={hc2} alt="Healthcare 3" />
                   </div>
                 </div>
               </div>
@@ -194,7 +194,7 @@ const Ourprogram = () => {
                   Together,
                   <br /> we can turn hunger into <span>hope.</span>
                 </h1>
-                <p  data-aos="fade-right">
+                <p data-aos="fade-right">
                   Our trust is dedicated to delivering essential flood
                   relief...Our trust is dedicated to delivering essential flood
                   relief to communities impacted by natural disasters. We offer
@@ -204,7 +204,7 @@ const Ourprogram = () => {
                   helping families rebuild their lives and restore their homes.
                 </p>
                 <div className="feed-image-container">
-                  <div className="feed-image1"data-aos="zoom-in">
+                  <div className="feed-image1" data-aos="zoom-in">
                     <img src={feed1} alt="Feed 1" />
                   </div>
                   <div className="feed-image2" data-aos="zoom-in">
@@ -266,10 +266,10 @@ const Ourprogram = () => {
             </button>
           </div>
           <div className="program-right">
-            <img src={proimg1} alt=""  data-aos="zoom-in"/>
+            <img src={proimg1} alt="" data-aos="zoom-in" />
           </div>
         </div>
-        <div className="ourprogram-sec" >
+        <div className="ourprogram-sec">
           <div className="our-heading">
             <h1 data-aos="zoom-in">Our Program</h1>
           </div>
@@ -304,7 +304,9 @@ const Ourprogram = () => {
 
         <div className="passionate">
           <div className="pass-con">
-            <h1 data-aos="fade-up">Are you passionate about making a difference?</h1>
+            <h1 data-aos="fade-up">
+              Are you passionate about making a difference?
+            </h1>
             <p data-aos="fade-up">
               we believe that every small act of kindness can create a ripple
               effect of positive change. By volunteering with us, you become a

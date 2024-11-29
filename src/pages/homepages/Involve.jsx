@@ -17,8 +17,8 @@ const Involve = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     AOS.init({
-      duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      duration: 2000,
+      once: false,
     });
   }, []);
 
@@ -30,6 +30,7 @@ const Involve = () => {
     location: "",
     area: "",
   });
+
   const [voldata, setVoldata] = useState({});
   const [errors, setErrors] = useState({});
   const [successMessage, setSuccessMessage] = useState("");
@@ -41,21 +42,34 @@ const Involve = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.firstName) newErrors.firstName = "First Name is required";
-    if (!formData.lastName) newErrors.lastName = "Last Name is required";
-    if (!formData.mobile) newErrors.mobile = "Mobile is required";
-    if (!formData.email) newErrors.email = "Email is required";
-    if (!formData.location) newErrors.location = "Location is required";
-    if (!formData.area) newErrors.area = "Area is required";
+    // Dynamic validation rules
+    const rules = {
+      firstName: { required: true, message: "First Name is required" },
+      lastName: { required: true, message: "Last Name is required" },
+      mobile: {
+        required: true,
+        regex: /^\d{10}$/,
+        message: "Mobile number must be 10 digits",
+      },
+      email: {
+        required: true,
+        regex: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+        message: "Invalid email address",
+      },
+      location: { required: true, message: "Location is required" },
+      area: { required: true, message: "Area is required" },
+    };
 
-    const phoneRegex = /^\d{10}$/;
-    if (formData.mobile && !phoneRegex.test(formData.mobile)) {
-      newErrors.mobile = "Mobile number must be 10 digits";
-    }
+    // Validate each field dynamically
+    for (const field in rules) {
+      const rule = rules[field];
+      const value = formData[field];
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (formData.email && !emailRegex.test(formData.email)) {
-      newErrors.email = "Invalid email address";
+      if (rule.required && !value) {
+        newErrors[field] = rule.message;
+      } else if (rule.regex && !rule.regex.test(value)) {
+        newErrors[field] = rule.message;
+      }
     }
 
     setErrors(newErrors);
@@ -109,7 +123,7 @@ const Involve = () => {
 
   useEffect(() => {
     if (Object.keys(voldata).length > 0) {
-      handleDownloadImage(); // Call the download function here
+      handleDownloadImage();
     }
   }, [voldata]);
 
@@ -118,7 +132,7 @@ const Involve = () => {
     html2canvas(element, { scale: 2 }).then((canvas) => {
       const link = document.createElement("a");
       link.href = canvas.toDataURL("image/jpeg");
-      link.download = `${voldata.volunteerName}_membership_card.jpg`; // Can also change 'jpeg' to 'png'
+      link.download = `${voldata.volunteerName}_membership_card.jpg`;
       link.click();
     });
   };
@@ -152,7 +166,6 @@ const Involve = () => {
 
       <div className="informmain" data-aos="zoom-out">
         <form onSubmit={handleSubmit} className="inform" data-aos="zoom-in">
-          {/* Form Fields */}
           <h1>Registration</h1>
           <div className="invcon">
             <div className="invsub">
@@ -239,7 +252,6 @@ const Involve = () => {
         </form>
       </div>
 
-      {/* Hidden Member Card Section */}
       <div style={{ position: "absolute", left: "-9999px" }}>
         <Membercard voldata={voldata} />
       </div>

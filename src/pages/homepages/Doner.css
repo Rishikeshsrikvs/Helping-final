@@ -39,6 +39,7 @@
 .form-group {
   width: 46%;
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
 }
 
@@ -89,6 +90,10 @@
 
 .submit-row {
   margin-top: 20px;
+}
+.error-msg {
+  color: red;
+  margin-top: 4px;
 }
 
 @media screen and (max-width: 768px) {

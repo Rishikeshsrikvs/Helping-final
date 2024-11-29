@@ -72,23 +72,33 @@ const Adupcomingevents = () => {
             </tr>
           </thead>
           <tbody>
-            {events.map((event) => (
-              <tr key={event.id}>
-                <td className="evname">{event.event_name}</td>
-                <td className="evdate">{event.event_date.substring(0, 10)}</td>
-                <td className="evlocation">{event.event_location}</td>
-                <td className="evDESC"><p>{event.event_desc}</p></td>
+            {events.length > 0 ? (
+              events.map((event) => (
+                <tr key={event.id}>
+                  <td className="evname">{event.event_name}</td>
+                  <td className="evdate">
+                    {event.event_date.substring(0, 10)}
+                  </td>
+                  <td className="evlocation">{event.event_location}</td>
+                  <td className="evDESC">
+                    <p>{event.event_desc}</p>
+                  </td>
 
-                <td className="evbtn">
-                  <button
-                    className="table-button"
-                    onClick={() => handleDelete(event._id)}
-                  >
-                    Delete
-                  </button>
-                </td>
+                  <td className="evbtn">
+                    <button
+                      className="table-button"
+                      onClick={() => handleDelete(event._id)}
+                    >
+                      Delete
+                    </button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5">No events found</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

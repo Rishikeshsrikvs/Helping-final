@@ -41,15 +41,21 @@ const Adminvollist = () => {
             </tr>
           </thead>
           <tbody>
-            {volunteers.map((volunteer) => (
+            {volunteers.length > 0 ? (
+              volunteers.map((volunteer) => (
+                <tr>
+                  <td>{volunteer.volunteerName}</td>
+                  <td>{volunteer.volunteerLocation}</td>
+                  <td>{volunteer.volunteerArea}</td>
+                  <td>{volunteer.volunteerEmail}</td>
+                  <td>{volunteer.volunteerContact}</td>
+                </tr>
+              ))
+            ) : (
               <tr>
-                <td>{volunteer.volunteerName}</td>
-                <td>{volunteer.volunteerLocation}</td>
-                <td>{volunteer.volunteerArea}</td>
-                <td>{volunteer.volunteerEmail}</td>
-                <td>{volunteer.volunteerContact}</td>
+                <td colSpan="5">No events found</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

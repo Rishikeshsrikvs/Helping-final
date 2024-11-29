@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import api from "../../api/api";
 import "./Doner.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const Doner = () => {
   useEffect(() => {
@@ -13,6 +12,7 @@ const Doner = () => {
       once: false, // Whether animation should happen only once
     });
   }, []);
+
   // State to manage form input values
   const [formData, setFormData] = useState({
     name: "",
@@ -23,34 +23,69 @@ const Doner = () => {
     area: "",
   });
 
+  // State to track validation errors
+  const [errors, setErrors] = useState({});
   // State for submission status message
   const [submissionStatus, setSubmissionStatus] = useState(null);
 
-  // Handler for input changes
+  // Validate all fields dynamically
+  const validateField = (name, value) => {
+    let errorMsg = "";
+    switch (name) {
+      case "name":
+        if (!value.trim()) errorMsg = "Name is required.";
+        break;
+      case "lastname":
+        if (!value.trim()) errorMsg = "Last name is required.";
+        break;
+      case "bloodgroup":
+        if (!value) errorMsg = "Blood group is required.";
+        break;
+      case "contact":
+        if (!/^\d{10}$/.test(value)) errorMsg = "Contact must be 10 digits.";
+        break;
+      case "city":
+        if (!value.trim()) errorMsg = "City is required.";
+        break;
+      default:
+        break;
+    }
+    return errorMsg;
+  };
+
+  // Handle input change and validate dynamically
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
       [name]: value,
     });
+
+    // Validate current field
+    const error = validateField(name, value);
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      [name]: error,
+    }));
   };
 
-  // Validate contact number
-  const validateContact = (contact) => {
-    return /^\d{10}$/.test(contact); // Checks if the contact is exactly 10 digits
+  // Validate all fields before submission
+  const validateForm = () => {
+    const newErrors = {};
+    Object.keys(formData).forEach((key) => {
+      const error = validateField(key, formData[key]);
+      if (error) newErrors[key] = error;
+    });
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0; // Return true if no errors
   };
 
-  // Handler for form submission
+  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validateForm()) return;
 
-    // Validate contact number
-    if (!validateContact(formData.contact)) {
-      setSubmissionStatus("Please enter a valid 10-digit contact number.");
-      return;
-    }
-
-    // Prepare data to match API requirements
+    // Prepare data for API
     const dataToSend = {
       donorName: `${formData.name} ${formData.lastname}`,
       donorContact: formData.contact,
@@ -60,7 +95,6 @@ const Doner = () => {
     };
 
     try {
-      // Sending POST request using Axios
       const response = await api.post("/donor", dataToSend, {
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
@@ -69,8 +103,6 @@ const Doner = () => {
 
       if (response.status === 201) {
         setSubmissionStatus("Form submitted successfully!");
-
-        // Reset form fields
         setFormData({
           name: "",
           lastname: "",
@@ -110,6 +142,7 @@ const Doner = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.name && <p className="error-msg">{errors.name}</p>}
             </div>
             <div className="form-group">
               <label htmlFor="lastname">LAST NAME :</label>
@@ -121,6 +154,9 @@ const Doner = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.lastname && (
+                <p className="error-msg">{errors.lastname}</p>
+              )}
             </div>
           </div>
           <div className="form-row">
@@ -143,6 +179,9 @@ const Doner = () => {
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
               </select>
+              {errors.bloodgroup && (
+                <p className="error-msg">{errors.bloodgroup}</p>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="contact">CONTACT NUMBER :</label>
@@ -154,6 +193,7 @@ const Doner = () => {
                 onChange={handleChange}
                 required
               />
+              {errors.contact && <p className="error-msg">{errors.contact}</p>}
             </div>
           </div>
           <div className="form-row">
@@ -163,11 +203,11 @@ const Doner = () => {
                 type="text"
                 id="city"
                 name="city"
-                placeholder="Example: "
                 value={formData.city}
                 onChange={handleChange}
                 required
               />
+              {errors.city && <p className="error-msg">{errors.city}</p>}
             </div>
             <div className="form-group">
               <label htmlFor="area">AREA :</label>
@@ -175,7 +215,6 @@ const Doner = () => {
                 type="text"
                 id="area"
                 name="area"
-                placeholder="Example: Avadi"
                 value={formData.area}
                 onChange={handleChange}
               />
@@ -186,7 +225,13 @@ const Doner = () => {
           </div>
         </form>
         {submissionStatus && (
-          <p className="submission-status">{submissionStatus}</p>
+          <p
+            className={`submission-status ${
+              submissionStatus.includes("successfully") ? "success" : "error"
+            }`}
+          >
+            {submissionStatus}
+          </p>
         )}
       </div>
     </div>

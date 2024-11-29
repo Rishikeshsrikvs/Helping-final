@@ -64,6 +64,7 @@ const AboutUs = () => {
     if (selectedYearId) {
       try {
         // Open the report in a new tab
+
         window.open(
           `${api.defaults.baseURL}/report/${selectedYearId}`,
           "_blank"
@@ -266,6 +267,7 @@ const AboutUs = () => {
               {/* Default option */}
 
               {/* Render years dynamically */}
+
               {years.map((year) => (
                 <option key={year._id} value={year._id}>
                   {year.year}{" "}

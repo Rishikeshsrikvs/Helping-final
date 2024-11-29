@@ -213,19 +213,25 @@ const AdminARP = () => {
               </tr>
             </thead>
             <tbody>
-              {reportyears.map((year) => (
-                <tr key={year._id}>
-                  <td>{year.year}</td>
-                  <td>
-                    <button
-                      onClick={() => handleDelete(year._id)}
-                      className="arp-td-delete"
-                    >
-                      Delete
-                    </button>
-                  </td>
+              {reportyears.length > 0 ? (
+                reportyears.map((year) => (
+                  <tr key={year._id}>
+                    <td>{year.year}</td>
+                    <td>
+                      <button
+                        onClick={() => handleDelete(year._id)}
+                        className="arp-td-delete"
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td colSpan="2">No reports found</td>
                 </tr>
-              ))}
+              )}
             </tbody>
           </table>
         </div>
