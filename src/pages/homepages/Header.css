@@ -53,7 +53,7 @@ li {
   width: 170px;
   height: 170px;
   z-index: 12222;
-  animation: spin 19s linear infinite, logoSpin 3s ease-in-out; /* Logo spin and scale animations */
+  animation: spin 19s linear infinite 4s, logoSpin 4s ease-in-out; /* Logo spin and scale animations */
   position: absolute;
   top: 10px;
   left: 5%; /* Centering vertically */
@@ -227,7 +227,7 @@ li {
   80% {
     top: 50%;
     left: 30%;
-    transform: translate(150%, 170%) scale(2.6) rotate(180deg); /* Initial state: scaled down and not rotated */
+    transform: translate(150%, 170%) scale(2.6) rotate(360deg); /* Initial state: scaled down and not rotated */
   }
 
   100% {

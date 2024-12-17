@@ -1,5 +1,5 @@
 import React from "react";
-import thiru from "./lsimage/thiru.png";
+import thiru from "./lsimage/thiru.jpg";
 import olai from "./lsimage/olaichu.png";
 import "./Landingslider.css";
 

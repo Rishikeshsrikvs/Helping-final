@@ -19,7 +19,14 @@ import card5 from "./Donateimage/card5.png";
 import card6 from "./Donateimage/card6.png";
 import card7 from "./Donateimage/card7.png";
 import card8 from "./Donateimage/card8.png";
-
+import card9 from "./Donateimage/homeless.jpeg";
+import card10 from "./Donateimage/oldagehome.jpg";
+import card11 from "./Donateimage/treeplant.jpeg";
+import card12 from "./Donateimage/wildlife.jpg";
+import card13 from "./Donateimage/womenempowerment.jpg";
+import card14 from "./Donateimage/childvaccine.jpg";
+import card15 from "./Donateimage/foodbank.jpg";
+import card16 from "./Donateimage/helthcheck.jpg";
 const Donate = () => {
   const [order, setOrder] = useState({});
   const [razorpayKey, setRazorpayKey] = useState("");
@@ -120,7 +127,27 @@ const Donate = () => {
     { id: "6", text: "Sponsor a child education", imageUrl: card5 },
     { id: "4", text: "Sponsor a Child care kit", imageUrl: card6 },
     { id: "7", text: "Support handicapped", imageUrl: card7 },
-    { id: "8", text: "Flood relief", imageUrl: card8 },
+    { id: "8", text: "sponcor for Flood relief", imageUrl: card8 },
+    { id: "9", text: "sponcer for homeless", imageUrl: card9 },
+    { id: "10", text: "sponcer a oldage home", imageUrl: card10 },
+    {
+      id: "11",
+      text: "sponcer for a  Tree Plantation Programs",
+      imageUrl: card11,
+    },
+    {
+      id: "12",
+      text: "sponcer for Wildlife Conservation Programs",
+      imageUrl: card12,
+    },
+    { id: "13", text: "sponcer for  Women Empowerment", imageUrl: card13 },
+    {
+      id: "14",
+      text: "sponcer for  Child Vaccination Programs",
+      imageUrl: card14,
+    },
+    { id: "15", text: "sponcer for  Foodbanks", imageUrl: card15 },
+    { id: "16", text: "sponcer for  free health checkups", imageUrl: card16 },
   ];
 
   return (

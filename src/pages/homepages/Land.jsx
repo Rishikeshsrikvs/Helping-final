@@ -61,7 +61,7 @@ const Land = () => {
 
       <div className="land3main" data-aos="zoom-in">
         <h1>
-          “help is different from ‘timely help’ sending some many to an
+          “help is different from ‘timely help’ sending some money to an
           orphanage every month is a help, but spontaneously helping during a
           critical time without expecting any reward is timely help”
         </h1>
