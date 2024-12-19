@@ -23,6 +23,56 @@
 .tgall img {
   width: 100%;
 }
+.organdonationcon {
+  padding: 20px;
+}
+.organdonationcon h1 {
+  font-size: 50px;
+  text-align: center;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.ordnsplit {
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.ordnleft {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+.ordnleft p {
+  font-size: 30px;
+  font-weight: 600;
+  word-spacing: 8px;
+}
+.ordnleft button {
+  width: fit-content;
+  padding: 10px 20px;
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 3px;
+}
+.ordnleft button:hover {
+  background-color: black;
+}
+.ordnright {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ordnright img {
+  width: 70%;
+  border-radius: 10px;
+}
 .donate-text {
   width: 100%;
 
@@ -65,6 +115,65 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .organdonationcon {
+    padding: 5px;
+  }
+  .organdonationcon h1 {
+    font-size: 20px;
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .ordnsplit {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .ordnleft {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+  }
+  .ordnleft p {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 600;
+    word-spacing: 8px;
+  }
+  .ordnleft button {
+    width: fit-content;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+  .ordnleft button {
+    width: fit-content;
+    padding: 10px 20px;
+    margin: 0 auto;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+  .ordnright {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .ordnright img {
+    width: 70%;
+    border-radius: 10px;
   }
   .donate-text h2 {
     width: 90%;

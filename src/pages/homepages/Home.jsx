@@ -15,6 +15,7 @@ import Involve from "./Involve.jsx";
 import Blooddonate from "./Blooddonate.jsx";
 import Privacy from "./Privacy.jsx";
 import Terms from "./Terms.jsx";
+import Organdonateform from "./Organdonateform.jsx";
 
 const Home = () => {
   const [isImageVisible, setIsImageVisible] = useState(true);
@@ -40,6 +41,7 @@ const Home = () => {
           <Route path="/blooddonate" element={<Blooddonate />} />
           <Route path="/privacy_policy" element={<Privacy />} />
           <Route path="/terms&conditions" element={<Terms />} />
+          <Route path="/organ_donate" element={<Organdonateform />} />
           {/* Catch-all route that redirects to Land component */}
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

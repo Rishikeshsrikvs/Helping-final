@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import tgall1 from "../Donate/Donateimage/don1.png";
 import tgall2 from "../Donate/Donateimage/don2.png";
 import tgall3 from "../Donate/Donateimage/don3.png";
 import tgall4 from "../Donate/Donateimage/don4.png";
 import tgall5 from "../Donate/Donateimage/don5.png";
+import organdonation from "./Donateimage/organdonation.jpg";
+
 import "./Donate.css";
 import Popup from "./Popup.jsx"; // Import the Popup component
 import api from "../../../../api/api.js";
@@ -27,6 +31,19 @@ import card13 from "./Donateimage/womenempowerment.jpg";
 import card14 from "./Donateimage/childvaccine.jpg";
 import card15 from "./Donateimage/foodbank.jpg";
 import card16 from "./Donateimage/helthcheck.jpg";
+import card17 from "./Donateimage/palative.jpeg";
+import card18 from "./Donateimage/aidshelp.jpg";
+import card19 from "./Donateimage/autism.jpeg";
+import card20 from "./Donateimage/cancer.jpg";
+import card21 from "./Donateimage/child labour.jpeg";
+import card22 from "./Donateimage/child mariage.jpeg";
+import card23 from "./Donateimage/critical.jpeg";
+import card24 from "./Donateimage/dialises.jpeg";
+import card25 from "./Donateimage/poverty.jpeg";
+import card26 from "./Donateimage/raredecease.jpeg";
+import card27 from "./Donateimage/refugee.jpeg";
+import card28 from "./Donateimage/rural.jpeg";
+import card29 from "./Donateimage/transplan.jpeg";
 const Donate = () => {
   const [order, setOrder] = useState({});
   const [razorpayKey, setRazorpayKey] = useState("");
@@ -34,6 +51,7 @@ const Donate = () => {
   const [showPopup, setShowPopup] = useState(false); // State to control popup visibility
   const [selectedImage, setSelectedImage] = useState(null); // State to store the clicked image
   const [selectedText, setSelectedText] = useState(""); // Store selected donation type text
+  const navigate = useNavigate();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -127,27 +145,76 @@ const Donate = () => {
     { id: "6", text: "Sponsor a child education", imageUrl: card5 },
     { id: "4", text: "Sponsor a Child care kit", imageUrl: card6 },
     { id: "7", text: "Support handicapped", imageUrl: card7 },
-    { id: "8", text: "sponcor for Flood relief", imageUrl: card8 },
-    { id: "9", text: "sponcer for homeless", imageUrl: card9 },
-    { id: "10", text: "sponcer a oldage home", imageUrl: card10 },
+    { id: "8", text: "sponsor for Flood relief", imageUrl: card8 },
+    { id: "9", text: "sponsor for homeless", imageUrl: card9 },
+    { id: "10", text: "sponsor a oldage home", imageUrl: card10 },
     {
       id: "11",
-      text: "sponcer for a  Tree Plantation Programs",
+      text: "sponsor for a  Tree Plantation Programs",
       imageUrl: card11,
     },
     {
       id: "12",
-      text: "sponcer for Wildlife Conservation Programs",
+      text: "sponsor for Wildlife Conservation Programs",
       imageUrl: card12,
     },
-    { id: "13", text: "sponcer for  Women Empowerment", imageUrl: card13 },
+    { id: "13", text: "sponsor for  Women Empowerment", imageUrl: card13 },
     {
       id: "14",
-      text: "sponcer for  Child Vaccination Programs",
+      text: "sponsor for  Child Vaccination Programs",
       imageUrl: card14,
     },
-    { id: "15", text: "sponcer for  Foodbanks", imageUrl: card15 },
-    { id: "16", text: "sponcer for  free health checkups", imageUrl: card16 },
+    { id: "15", text: "sponsor for  Foodbanks", imageUrl: card15 },
+    { id: "16", text: "sponsor for  free health checkups", imageUrl: card16 },
+    { id: "17", text: "Sponsor for  palliative care", imageUrl: card17 },
+    {
+      id: "18",
+      text: "Sponsor for  AIDS Awareness and Support",
+      imageUrl: card18,
+    },
+    { id: "19", text: "Sponsor for   Autism Care", imageUrl: card19 },
+    { id: "20", text: "Sponsor for  Cancer Treatment", imageUrl: card20 },
+    {
+      id: "21",
+      text: "Sponsor for Child Labor Eradication",
+      imageUrl: card21,
+    },
+    {
+      id: "22",
+      text: "Sponsor for Child Marriage Prevention",
+      imageUrl: card22,
+    },
+    {
+      id: "23",
+      text: "Sponsor for Critical Illness Treatment",
+      imageUrl: card23,
+    },
+    {
+      id: "24",
+      text: "Sponsor for  Dialysis Treatment Support",
+      imageUrl: card24,
+    },
+    {
+      id: "25",
+      text: "Sponsor for  Poverty Eradication Programs",
+      imageUrl: card25,
+    },
+    {
+      id: "26",
+      text: "Sponsor for  Treatment of Rare Diseases",
+      imageUrl: card26,
+    },
+    {
+      id: "27",
+      text: "Sponsor for  Refugee Relief Programs",
+      imageUrl: card27,
+    },
+    { id: "28", text: "Sponsor for  Rural developement", imageUrl: card28 },
+    {
+      id: "29",
+      text: "Sponsor for  Organ Transplant Support",
+      imageUrl: card29,
+    },
   ];
 
   return (
@@ -168,6 +235,24 @@ const Donate = () => {
           </div>
           <div className="tgall">
             <img src={tgall5} alt="Donation 5" />
+          </div>
+        </div>
+        <div className="organdonationcon">
+          <h1>Organ Donation : Gift of Life</h1>
+          <div className="ordnsplit">
+            <div className="ordnleft">
+              <p>
+                Your decision to donate organs can give someone a second chance
+                at life. Join us in spreading awareness and supporting this
+                noble cause.
+              </p>
+              <button onClick={() => navigate("/organ_donate")}>
+                Reigister Now
+              </button>
+            </div>
+            <div className="ordnright">
+              <img src={organdonation} alt="" />
+            </div>
           </div>
         </div>
         <div className="donate-text">

@@ -1,0 +1,97 @@
+.organdonateformcon {
+  width: 100%;
+}
+.organmain {
+  width: 70%;
+  margin: 30px auto;
+  background-color: black;
+  color: white;
+  padding: 20px 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.organmain h1 {
+  font-size: 40px;
+  text-align: center;
+  font-weight: 700;
+  margin: 10px auto;
+}
+.organinput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.organinput label {
+  font-size: 20px;
+  font-weight: 600;
+}
+.organinput input {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.organinput textarea {
+  height: 100px;
+  border-radius: 4px;
+  padding: 5px;
+  font-size: 20px;
+}
+.organmain button {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 10px 30px;
+  width: fit-content;
+  margin: 0 auto;
+}
+@media screen and (max-width: 769px) {
+  .organmain {
+    width: 80%;
+    margin: 30px auto;
+    background-color: black;
+    color: white;
+    padding: 20px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .organmain h1 {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 700;
+    margin: 10px auto;
+  }
+  .organinput {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .organinput label {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .organinput input {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  .organinput textarea {
+    height: 100px;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 15px;
+  }
+  .organmain button {
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 4px;
+    padding: 10px 30px;
+    width: fit-content;
+    margin: 0 auto;
+  }
+}

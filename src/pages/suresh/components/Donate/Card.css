@@ -22,7 +22,7 @@
 }
 
 .card:hover .dcardback {
-  transform: translateY(60%);
+  transform: translateY(5%);
   /* background-color: rgba(0, 0, 0, 0.8) ; */
 }
 .dcardimgcon {
@@ -45,7 +45,7 @@
   position: absolute;
 
   z-index: 4;
-  transform: translateY(100%);
+  transform: translateY(60%);
   transition: transform 0.2s ease;
 }
 .dcardback:hover {

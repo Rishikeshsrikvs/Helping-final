@@ -9,11 +9,11 @@ const Card = ({ imageUrl, onClick, text }) => {
     window.scrollTo(0, 0);
     AOS.init({
       duration: 2000, // Animation duration in ms
-      once: false,     // Whether animation should happen only once
+      once: false, // Whether animation should happen only once
     });
-  },[]);
+  }, []);
   return (
-    <div className="card"  data-aos="fade-up" onClick={() => onClick(imageUrl, text)}>
+    <div className="card" onClick={() => onClick(imageUrl, text)}>
       <div className="dcardimgcon">
         <img src={imageUrl} className="card-image" alt="Card" />
       </div>
